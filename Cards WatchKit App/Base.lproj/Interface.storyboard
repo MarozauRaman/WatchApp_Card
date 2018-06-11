@@ -34,7 +34,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <table alignment="left" id="JQw-Zg-j5Y">
+                        <table alignment="left" id="JQw-Zg-j5Y" customClass="WK">
                             <items>
                                 <tableRow id="IFA-9O-1FF">
                                     <group key="rootItem" width="1" alignment="left" id="jn1-yV-LI6">
@@ -42,7 +42,7 @@
                                             <imageView width="40" height="40" alignment="left" id="QqQ-Km-tkx"/>
                                             <group width="41" alignment="left" layout="vertical" id="Mwj-gt-kGM">
                                                 <items>
-                                                    <label alignment="left" text="Label" numberOfLines="0" id="kDA-0a-RIg">
+                                                    <label width="136" alignment="left" text="Label" numberOfLines="0" id="kDA-0a-RIg">
                                                         <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                     </label>
                                                     <label alignment="left" text="Label" numberOfLines="0" id="aan-1o-jEm">
@@ -63,7 +63,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="16" y="31"/>
+            <point key="canvasLocation" x="15.692307692307693" y="30.948717948717952"/>
         </scene>
         <!--Second Screen Interface Controller-->
         <scene sceneID="hZP-6u-gCJ">

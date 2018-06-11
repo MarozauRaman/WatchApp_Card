@@ -10,6 +10,7 @@
 
 
 @interface InterfaceController ()
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *card;
 
 @end
 

@@ -24,6 +24,9 @@
 		AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48920CE8CE6002EBE4C /* SecondScreenInterfaceController.m */; };
 		AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */; };
 		AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */; };
+		AD31F49320CE9DF6002EBE4C /* CardTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F49220CE9DF6002EBE4C /* CardTitleController.m */; };
+		AD31F49620CE9E1F002EBE4C /* CardNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F49520CE9E1F002EBE4C /* CardNumberController.m */; };
+		AD31F49920CE9E34002EBE4C /* CardImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F49820CE9E34002EBE4C /* CardImageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +208,12 @@
 		AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtractionInterfaceController.m; sourceTree = "<group>"; };
 		AD31F48E20CE8DA1002EBE4C /* AboutCardInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutCardInterfaceController.h; sourceTree = "<group>"; };
 		AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutCardInterfaceController.m; sourceTree = "<group>"; };
+		AD31F49120CE9DF6002EBE4C /* CardTitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardTitleController.h; sourceTree = "<group>"; };
+		AD31F49220CE9DF6002EBE4C /* CardTitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardTitleController.m; sourceTree = "<group>"; };
+		AD31F49420CE9E1F002EBE4C /* CardNumberController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardNumberController.h; sourceTree = "<group>"; };
+		AD31F49520CE9E1F002EBE4C /* CardNumberController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardNumberController.m; sourceTree = "<group>"; };
+		AD31F49720CE9E34002EBE4C /* CardImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardImageController.h; sourceTree = "<group>"; };
+		AD31F49820CE9E34002EBE4C /* CardImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardImageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +297,12 @@
 				AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */,
 				AD31F48E20CE8DA1002EBE4C /* AboutCardInterfaceController.h */,
 				AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */,
+				AD31F49120CE9DF6002EBE4C /* CardTitleController.h */,
+				AD31F49220CE9DF6002EBE4C /* CardTitleController.m */,
+				AD31F49420CE9E1F002EBE4C /* CardNumberController.h */,
+				AD31F49520CE9E1F002EBE4C /* CardNumberController.m */,
+				AD31F49720CE9E34002EBE4C /* CardImageController.h */,
+				AD31F49820CE9E34002EBE4C /* CardImageController.m */,
 			);
 			path = "Cards WatchKit Extension";
 			sourceTree = "<group>";
@@ -837,6 +852,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD31F49320CE9DF6002EBE4C /* CardTitleController.m in Sources */,
+				AD31F49920CE9E34002EBE4C /* CardImageController.m in Sources */,
+				AD31F49620CE9E1F002EBE4C /* CardNumberController.m in Sources */,
 				AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */,
 				AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */,
 				AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */,
