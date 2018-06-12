@@ -12,14 +12,14 @@
         <array key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
         </array>
-        <array key="Lato-Medium.ttf">
-            <string>Lato-Medium</string>
+        <array key="Lato-Italic.ttf">
+            <string>Lato-Italic</string>
         </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
-        <array key="Roboto-Medium-webfont.ttf">
-            <string>Roboto-Medium</string>
+        <array key="Roboto-Italic-webfont.ttf">
+            <string>Roboto-Italic</string>
         </array>
         <array key="Roboto-Regular-webfont.ttf">
             <string>Roboto-Regular</string>
@@ -34,43 +34,49 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <table alignment="left" id="JQw-Zg-j5Y" customClass="WK">
+                        <table alignment="left" id="W3c-Je-kNV" customClass="Card">
                             <items>
-                                <tableRow id="IFA-9O-1FF">
-                                    <group key="rootItem" width="1" alignment="left" id="jn1-yV-LI6">
+                                <tableRow identifier="CardTableRowController" id="faF-tb-IJE" customClass="CardTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="XDQ-Tu-Z5U">
                                         <items>
-                                            <imageView width="40" height="40" alignment="left" id="QqQ-Km-tkx"/>
-                                            <group width="41" alignment="left" layout="vertical" id="Mwj-gt-kGM">
+                                            <imageView width="40" height="40" alignment="left" id="Zhv-BB-PfC"/>
+                                            <group width="41" alignment="left" layout="vertical" id="C2a-8W-hcE">
                                                 <items>
-                                                    <label width="136" alignment="left" text="Label" numberOfLines="0" id="kDA-0a-RIg">
-                                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                    <label width="136" height="20" alignment="left" accessibilityLabel="title" accessibilityIdentifier="title" text="Label" numberOfLines="0" id="Dax-zw-r4R" userLabel="title">
+                                                        <fontDescription key="font" name="Lato-Italic" family="Lato" pointSize="15"/>
                                                     </label>
-                                                    <label alignment="left" text="Label" numberOfLines="0" id="aan-1o-jEm">
+                                                    <label alignment="left" accessibilityLabel="number" accessibilityIdentifier="number" text="Label" numberOfLines="0" id="CIi-5P-NEO" userLabel="number">
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        <fontDescription key="font" name="Lato-Italic" family="Lato" pointSize="13"/>
                                                     </label>
                                                 </items>
                                             </group>
                                         </items>
-                                        <color key="backgroundColor" red="0.01278987228" green="0.15347663889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="Ad8-gV-Eyv" kind="push" id="2NN-Lt-zDB"/>
+                                            <segue destination="Ad8-gV-Eyv" kind="push" id="0t2-a2-gkH"/>
                                         </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="image" destination="Zhv-BB-PfC" id="zcX-Ul-HeW"/>
+                                        <outlet property="number" destination="CIi-5P-NEO" id="1JN-f6-5x9"/>
+                                        <outlet property="title" destination="Dax-zw-r4R" id="DYH-qp-FLn"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="card" destination="W3c-Je-kNV" id="Lzq-RA-qWV"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="15.692307692307693" y="30.948717948717952"/>
+            <point key="canvasLocation" x="-8" y="27"/>
         </scene>
         <!--Second Screen Interface Controller-->
         <scene sceneID="hZP-6u-gCJ">
             <objects>
                 <controller id="Ad8-gV-Eyv" customClass="SecondScreenInterfaceController">
                     <items>
-                        <table alignment="left" id="78e-Y4-NZ4"/>
                         <group width="1" alignment="left" layout="vertical" id="kE4-YY-6K8">
                             <items>
                                 <group width="1" alignment="left" id="z87-7f-0c3">
@@ -113,6 +119,11 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="AboutCardButton" destination="SuP-zf-oZK" id="lCA-nD-gJ9"/>
+                        <outlet property="ExtractionButton" destination="rUn-gt-WDU" id="Y07-vV-weU"/>
+                        <outlet property="cardInfo" destination="kE4-YY-6K8" id="GV0-ez-zYC"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="295.53846153846155" y="30.948717948717952"/>
@@ -125,27 +136,38 @@
                         <label alignment="center" text="За неделю" textAlignment="center" baselineAdjustment="alignCenters" id="nrK-j6-coe">
                             <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                         </label>
-                        <table alignment="left" id="oB9-SS-Mgs">
+                        <table alignment="left" id="3iL-BU-H8N">
                             <items>
-                                <tableRow id="9H2-gD-SvJ">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="jeL-If-SnH">
+                                <tableRow identifier="TransactionTableRowController" id="zJn-eb-gca" customClass="TransactionTableRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="yfE-Jj-Etp">
                                         <items>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="H0M-aG-jYL">
-                                                <fontDescription key="font" name="Lato-Medium" family="Lato" pointSize="18"/>
+                                            <label alignment="left" accessibilityLabel="labell" accessibilityIdentifier="labell" text="Text1" numberOfLines="0" id="Bna-Ry-Gks" userLabel="labell">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" name="Lato-Italic" family="Lato" pointSize="19"/>
                                             </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="0lG-en-tZX">
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="font" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                            <label alignment="left" text="Text2" id="fSW-cB-Rhx">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" name="Roboto-Italic" family="Roboto" pointSize="12"/>
                                             </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="Jpx-gy-3ny">
-                                                <fontDescription key="font" name="Lato-Medium" family="Lato" pointSize="16"/>
+                                            <label alignment="left" text="Text3" id="YHG-yj-iDF">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" name="Lato-Italic" family="Lato" pointSize="25"/>
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="date" destination="YHG-yj-iDF" id="Yri-dR-LwD"/>
+                                        <outlet property="money" destination="Bna-Ry-Gks" id="JMw-wI-sHO"/>
+                                        <outlet property="text" destination="fSW-cB-Rhx" id="g0X-L2-9Er"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="extractionCard" destination="3iL-BU-H8N" id="BO7-iy-2EA"/>
+                        <outlet property="forWeekLabel" destination="nrK-j6-coe" id="ofB-d5-5t1"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="602" y="-196"/>
@@ -155,27 +177,35 @@
             <objects>
                 <controller id="3C6-V4-q9c" customClass="AboutCardInterfaceController">
                     <items>
-                        <table alignment="left" id="nuz-lI-I73">
+                        <table alignment="left" id="kHv-Nk-UiF">
                             <items>
-                                <tableRow id="Tl9-r7-0N1">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="bN9-9f-bs8">
+                                <tableRow identifier="InfoTableRowController" id="wes-dn-mLP" customClass="InfoTableRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="T8J-em-RLb">
                                         <items>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="9bs-bW-hk7">
+                                            <label alignment="left" text="Label" numberOfLines="0" id="4J3-Wi-rIX">
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="font" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="14"/>
                                             </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="iQh-wn-npJ">
+                                            <label alignment="left" text="Label" numberOfLines="0" id="6as-Td-nVT">
                                                 <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="data" destination="6as-Td-nVT" id="Pxq-Ci-poE"/>
+                                        <outlet property="title" destination="4J3-Wi-rIX" id="4Ln-uJ-FaC"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="cardAbout" destination="kHv-Nk-UiF" id="Z3P-1E-x1r"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="602" y="200"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.01278987228" green="0.15347663889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

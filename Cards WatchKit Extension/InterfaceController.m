@@ -9,8 +9,11 @@
 #import "InterfaceController.h"
 
 
+
+
 @interface InterfaceController ()
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *card;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *card;
 
 @end
 
@@ -19,8 +22,13 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
     // Configure interface objects here.
+    [self setTitle:@"Bank"];
+    
+    [self configureTableWithData];
+    
+    
+    
 }
 
 - (void)willActivate {
@@ -31,6 +39,13 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+-(void)configureTableWithData{
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"/Users/practice/Projects/Cards/Cards WatchKit App/Cards" ofType:@"plist"]];
+    [_card setRowTypes:plist];
+    int num = sizeof(plist);
+    [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
+    NSLog(@"%i", self.card.numberOfRows);
 }
 
 @end

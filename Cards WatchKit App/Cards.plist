@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Visa Classic</string>
+		<key>Number</key>
+		<string>1234 1234 1234 1234</string>
+		<key>IBAN</key>
+		<string>123456789012345678901234567</string>
+		<key>Term</key>
+		<string>12.12.2018</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>MasterCard</string>
+		<key>Number</key>
+		<string>4321 4321 4321 4321</string>
+		<key>IBAN</key>
+		<string>098765432109876543210987654</string>
+		<key>Term</key>
+		<string>11.11.2019</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Maestro</string>
+		<key>Number</key>
+		<string>4567 4567 4567 4567</string>
+		<key>IBAN</key>
+		<string>123456789009876543211234567</string>
+		<key>Term</key>
+		<string>10.10.2020</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Белкард</string>
+		<key>Number</key>
+		<string>7890 7890 7890 7890</string>
+		<key>IBAN</key>
+		<string>123456789012345678900987654</string>
+		<key>Term</key>
+		<string>13.11.2021</string>
+	</dict>
+</array>
+</plist>

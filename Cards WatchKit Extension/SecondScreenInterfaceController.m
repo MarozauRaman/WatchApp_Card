@@ -9,6 +9,9 @@
 #import "SecondScreenInterfaceController.h"
 
 @interface SecondScreenInterfaceController ()
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *cardInfo;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *ExtractionButton;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *AboutCardButton;
 
 @end
 
@@ -16,8 +19,8 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
     // Configure interface objects here.
+    [self setTitle:@"Назад"];
 }
 
 - (void)willActivate {
