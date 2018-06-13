@@ -10,9 +10,10 @@
 #import <WatchKit/WatchKit.h>
 
 @interface CardTableRowController : NSObject
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *title;
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *number;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *image;
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labell;
 
 @end

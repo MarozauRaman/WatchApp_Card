@@ -7,6 +7,7 @@
 //
 
 #import "InterfaceController.h"
+#import "CardTableRowController.h"
 
 
 
@@ -41,10 +42,29 @@
     [super didDeactivate];
 }
 -(void)configureTableWithData{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"/Users/practice/Projects/Cards/Cards WatchKit App/Cards" ofType:@"plist"]];
-    [_card setRowTypes:plist];
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
+
+    //[_card setRowTypes:plist];
+    NSLog(@"%@", plist);
+    //number of rows
     int num = sizeof(plist);
     [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
+    NSInteger rowCount = self.card.numberOfRows;
+
+//    NSInteger i = 0;
+//    
+//    
+//    for (id key in plist){
+//        for(i=0;i<rowCount;i++){
+//            CardTableRowController* row = [self.card rowControllerAtIndex:i];
+//            for(NSString* o in titles){
+//                [row.labell setText:o];
+//                NSLog(@"%@", o);
+//            }
+//        }
+//    }
+    
+    
     NSLog(@"%i", self.card.numberOfRows);
 }
 

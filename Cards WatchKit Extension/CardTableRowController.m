@@ -7,8 +7,14 @@
 //
 
 #import "CardTableRowController.h"
+#import "InterfaceController.h"
 
 
 @implementation CardTableRowController
-
+-(void)setLabell:(WKInterfaceLabel *)labell{
+    [_labell setText:(NSString*)labell];
+}
+-(void)setNumber:(WKInterfaceLabel *)number{
+    [_number setText:(NSString*)number];
+}
 @end

@@ -11,6 +11,8 @@
 		<string>123456789012345678901234567</string>
 		<key>Term</key>
 		<string>12.12.2018</string>
+		<key>Balance</key>
+		<string>398,43</string>
 	</dict>
 	<dict>
 		<key>Title</key>
@@ -21,6 +23,8 @@
 		<string>098765432109876543210987654</string>
 		<key>Term</key>
 		<string>11.11.2019</string>
+		<key>Balance</key>
+		<string>478,08</string>
 	</dict>
 	<dict>
 		<key>Title</key>
@@ -31,16 +35,32 @@
 		<string>123456789009876543211234567</string>
 		<key>Term</key>
 		<string>10.10.2020</string>
+		<key>Balance</key>
+		<string>10000000000</string>
 	</dict>
 	<dict>
 		<key>Title</key>
-		<string>Белкард</string>
+		<string>Белкарт</string>
 		<key>Number</key>
 		<string>7890 7890 7890 7890</string>
 		<key>IBAN</key>
 		<string>123456789012345678900987654</string>
 		<key>Term</key>
 		<string>13.11.2021</string>
+		<key>Balance</key>
+		<string>553,97</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Белкарт</string>
+		<key>Number</key>
+		<string>7890 7890 7890 7890</string>
+		<key>IBAN</key>
+		<string>123456789012345678900987654</string>
+		<key>Term</key>
+		<string>13.11.2021</string>
+		<key>Balance</key>
+		<string>553,97</string>
 	</dict>
 </array>
 </plist>

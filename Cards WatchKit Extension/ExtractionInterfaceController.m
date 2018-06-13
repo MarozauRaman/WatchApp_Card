@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *forWeekLabel;
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *extractionCard;
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *extractionCard;
 
 @end
 
@@ -40,12 +40,11 @@
 }
 
 -(void)configureTableWithData{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"/Users/practice/Projects/Cards/Cards WatchKit App/Cards" ofType:@"plist"]];
-    [_extractionCard setRowTypes:plist];
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CardsExtractions" ofType:@"plist"]];
     int num = sizeof(plist);
     [self.extractionCard setNumberOfRows:num withRowType:@"TransactionTableRowController"];
-    NSLog(@"Last");
     
+    NSLog(@"Last");
     NSLog(@"%i", self.extractionCard.numberOfRows);
 }
 
