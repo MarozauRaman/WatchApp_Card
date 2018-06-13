@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
 		AD31F3BE20CE7CB1002EBE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3BC20CE7CB1002EBE4C /* Main.storyboard */; };
@@ -283,7 +284,6 @@
 				AD31F3F720CE84DD002EBE4C /* roboto */,
 				AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */,
 				AD31F3D320CE7CB2002EBE4C /* Info.plist */,
-				ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */,
 			);
 			path = "Cards WatchKit App";
 			sourceTree = "<group>";
@@ -294,6 +294,7 @@
 				AD31F3E020CE7CB2002EBE4C /* ExtensionDelegate.h */,
 				AD31F3E120CE7CB2002EBE4C /* ExtensionDelegate.m */,
 				AD31F3E320CE7CB3002EBE4C /* Assets.xcassets */,
+				ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */,
 				AD5904B720CFAA9A0068C8F0 /* Cards.plist */,
 				AD31F3E520CE7CB3002EBE4C /* Info.plist */,
 				AD31F3DD20CE7CB2002EBE4C /* InterfaceController.h */,
@@ -840,6 +841,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */,
 				ADC6C54E20D12EBC008F1E52 /* Cards.plist in Resources */,
 				AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */,
 			);
@@ -971,6 +973,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1022,6 +1025,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

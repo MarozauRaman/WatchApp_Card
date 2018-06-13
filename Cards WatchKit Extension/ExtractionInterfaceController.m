@@ -41,7 +41,7 @@
 
 -(void)configureTableWithData{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CardsExtractions" ofType:@"plist"]];
-    int num = sizeof(plist);
+    int num = [plist count];
     [self.extractionCard setNumberOfRows:num withRowType:@"TransactionTableRowController"];
     
     NSLog(@"Last");

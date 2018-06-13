@@ -44,10 +44,10 @@
 -(void)configureTableWithData{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
 
-    //[_card setRowTypes:plist];
     NSLog(@"%@", plist);
     //number of rows
-    int num = sizeof(plist);
+    int num = [plist count];
+    NSLog(@"%d", num);
     [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
     NSInteger rowCount = self.card.numberOfRows;
 
