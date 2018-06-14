@@ -14,7 +14,7 @@
 @interface InterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *card;
-
+@property(weak,nonatomic) IBOutlet NSArray *dataa;
 @end
 
 
@@ -49,18 +49,20 @@
     [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
     
     NSInteger rowCount = self.card.numberOfRows;
-
+    
     
     for(int i =0;i<rowCount;i++){
         CardTableRowController* row = [self.card rowControllerAtIndex:i];
         
         NSDictionary *dict = [plist objectAtIndex:i];
+        
+        
         for(id key in dict){
             NSString* data = [dict objectForKey:key];
             if([key  isEqual: @"Title"]){
                 [row.labell setText:data];
                 NSString* lowerKey = [data lowercaseString];
-               
+                
            
                 if ([lowerKey containsString:@"mastercard"]) {
                     [row.image setImageNamed:@"mastercard.png"];
@@ -81,15 +83,21 @@
             }
             if([key isEqual:@"Number"]){
                 [row.number setText:[asterisks stringByAppendingString:[data substringFromIndex:15]]];
-                
-                
             }
+            
         }
+        
     }
+    
 }
 
+-(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
 
-
+    NSDictionary *dict = [plist objectAtIndex:rowIndex];
+    NSLog(@"%@", dict);
+    [self pushControllerWithName:@"SecondScreenInterfaceController" context:dict];
+}
 
 @end
 

@@ -21,6 +21,11 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Назад"];
+    NSLog(@"%@", context);
+    NSDictionary *dict = (NSDictionary*) context;
+    NSLog(@"%@", dict);
+    [_labelll setText:dict[@"Title"]];
+    
 
 }
 

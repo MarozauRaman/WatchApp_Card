@@ -52,9 +52,6 @@
                                                 </items>
                                             </group>
                                         </items>
-                                        <connections>
-                                            <segue destination="Ad8-gV-Eyv" kind="push" identifier="toSecondScreen" id="0t2-a2-gkH"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="image" destination="Zhv-BB-PfC" id="zcX-Ul-HeW"/>
@@ -124,7 +121,7 @@
                         <outlet property="ExtractionButton" destination="rUn-gt-WDU" id="Y07-vV-weU"/>
                         <outlet property="balance" destination="hpf-EL-jCK" id="UFD-DR-aWD"/>
                         <outlet property="cardInfo" destination="kE4-YY-6K8" id="GV0-ez-zYC"/>
-                        <outlet property="labell" destination="N5T-mY-LyA" id="Wx5-Jz-2IH"/>
+                        <outlet property="labelll" destination="N5T-mY-LyA" id="ZGF-K5-MAV"/>
                         <outlet property="number" destination="j0t-op-3iw" id="NPh-oA-YM5"/>
                     </connections>
                 </controller>
