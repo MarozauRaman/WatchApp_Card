@@ -8,8 +8,7 @@
 
 #import "InterfaceController.h"
 #import "CardTableRowController.h"
-
-
+#import "SecondScreenInterfaceController.h"
 
 
 @interface InterfaceController ()
@@ -25,7 +24,6 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Bank"];
-    
     [self configureTableWithData];
     
     
@@ -44,29 +42,54 @@
 -(void)configureTableWithData{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
 
-    NSLog(@"%@", plist);
+    NSString *asterisks = @"****";
     //number of rows
     int num = [plist count];
-    NSLog(@"%d", num);
+
     [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
+    
     NSInteger rowCount = self.card.numberOfRows;
 
-//    NSInteger i = 0;
-//    
-//    
-//    for (id key in plist){
-//        for(i=0;i<rowCount;i++){
-//            CardTableRowController* row = [self.card rowControllerAtIndex:i];
-//            for(NSString* o in titles){
-//                [row.labell setText:o];
-//                NSLog(@"%@", o);
-//            }
-//        }
-//    }
     
-    
-    NSLog(@"%i", self.card.numberOfRows);
+    for(int i =0;i<rowCount;i++){
+        CardTableRowController* row = [self.card rowControllerAtIndex:i];
+        
+        NSDictionary *dict = [plist objectAtIndex:i];
+        for(id key in dict){
+            NSString* data = [dict objectForKey:key];
+            if([key  isEqual: @"Title"]){
+                [row.labell setText:data];
+                NSString* lowerKey = [data lowercaseString];
+               
+           
+                if ([lowerKey containsString:@"mastercard"]) {
+                    [row.image setImageNamed:@"mastercard.png"];
+                    break;
+                }
+                if ([lowerKey containsString:@"visa"]){
+                    [row.image setImageNamed:@"visa.png"];
+                    break;
+                }
+                if ([lowerKey containsString:@"maestro"]) {
+                    [row.image setImageNamed:@"maestro.png"];
+                    break;
+                } else {
+                    [row.image setImageNamed:@"anyCard.png"];
+                    break;
+                }
+                
+            }
+            if([key isEqual:@"Number"]){
+                [row.number setText:[asterisks stringByAppendingString:[data substringFromIndex:15]]];
+                
+                
+            }
+        }
+    }
 }
+
+
+
 
 @end
 

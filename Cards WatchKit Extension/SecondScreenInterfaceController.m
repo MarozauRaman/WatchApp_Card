@@ -8,11 +8,11 @@
 
 #import "SecondScreenInterfaceController.h"
 
+
 @interface SecondScreenInterfaceController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *cardInfo;
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *ExtractionButton;
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *AboutCardButton;
-
 @end
 
 @implementation SecondScreenInterfaceController
@@ -21,6 +21,7 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Назад"];
+
 }
 
 - (void)willActivate {
@@ -32,6 +33,7 @@
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
+
 
 @end
 

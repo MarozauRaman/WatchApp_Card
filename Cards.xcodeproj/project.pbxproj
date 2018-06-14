@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */; };
+		AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
 		AD31F3BE20CE7CB1002EBE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3BC20CE7CB1002EBE4C /* Main.storyboard */; };
@@ -843,6 +844,7 @@
 			files = (
 				84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */,
 				ADC6C54E20D12EBC008F1E52 /* Cards.plist in Resources */,
+				AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */,
 				AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

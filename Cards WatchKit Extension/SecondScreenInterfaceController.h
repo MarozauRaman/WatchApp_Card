@@ -10,5 +10,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SecondScreenInterfaceController : WKInterfaceController
-
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *labelll;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *number;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *balance;
 @end

@@ -35,13 +35,11 @@
     [super didDeactivate];
 }
 -(void)configureTableWithData{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"/Users/practice/Projects/Cards/Cards WatchKit App/Cards" ofType:@"plist"]];
-    [_cardAbout setRowTypes:plist];
-    int num = sizeof(plist);
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
+    NSDictionary *dict = [plist objectAtIndex:0];
+    int num = [dict count];
     [self.cardAbout setNumberOfRows:num withRowType:@"InfoTableRowController"];
-    NSLog(@"Last");
-    
-    NSLog(@"%i", self.cardAbout.numberOfRows);
+ 
 }
 
 @end
