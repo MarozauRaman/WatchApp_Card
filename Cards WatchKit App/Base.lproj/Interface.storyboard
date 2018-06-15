@@ -35,7 +35,7 @@
                                             </imageView>
                                             <group alignment="left" layout="vertical" id="C2a-8W-hcE">
                                                 <items>
-                                                    <label alignment="left" accessibilityLabel="title" accessibilityIdentifier="titl" text="Label" textAlignment="left" numberOfLines="0" id="Dax-zw-r4R" userLabel="title">
+                                                    <label alignment="left" accessibilityLabel="title" accessibilityIdentifier="titl" text="Label" textAlignment="left" minimumScaleFactor="0.0" id="Dax-zw-r4R" userLabel="title">
                                                         <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                     </label>
                                                     <label alignment="left" accessibilityLabel="number" accessibilityIdentifier="number" text="Label" textAlignment="left" numberOfLines="0" id="CIi-5P-NEO" userLabel="number">
@@ -146,7 +146,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="20"/>
                                             </label>
-                                            <label alignment="left" text="Text2" id="fSW-cB-Rhx">
+                                            <label alignment="left" text="Text2" numberOfLines="0" id="fSW-cB-Rhx">
                                                 <color key="textColor" red="0.60392156862745094" green="0.63137254901960782" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                             </label>
