@@ -7,6 +7,7 @@
 //
 
 #import "AboutCardInterfaceController.h"
+#import "InfoTableRowController.h"
 
 @interface AboutCardInterfaceController ()
 
@@ -22,7 +23,39 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"О карте"];
-    [self configureTableWithData];
+    NSDictionary* info =(NSDictionary*)context;
+    int num = info.count;
+    [self.cardAbout setNumberOfRows:num-1 withRowType:@"InfoTableRowController"];
+
+        
+        for(id key in info){
+            
+            NSString* data = [info objectForKey:key];
+
+            if([key isEqual:@"Title"]){
+                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:0];
+                [row.labell setText:@"Название"];
+                [row.data setText:data];
+            }
+            if([key isEqual:@"Number"]){
+                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:1];
+                [row.labell setText:@"Номер"];
+                [row.data setText:data];
+            }
+            if([key isEqual:@"IBAN"]){
+                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:2];
+                [row.labell setText:@"IBAN"];
+                [row.data setText:data];
+            }
+            if([key isEqual:@"Term"]){
+                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:3];
+                [row.labell setText:@"Срок действия карты"];
+                [row.data setText:data];
+            }
+            
+            
+        }
+    
 }
 
 - (void)willActivate {
@@ -35,10 +68,7 @@
     [super didDeactivate];
 }
 -(void)configureTableWithData{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-    NSDictionary *dict = [plist objectAtIndex:0];
-    int num = [dict count];
-    [self.cardAbout setNumberOfRows:num withRowType:@"InfoTableRowController"];
+    
  
 }
 

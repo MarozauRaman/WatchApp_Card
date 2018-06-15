@@ -14,7 +14,6 @@
 @interface InterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *card;
-@property(weak,nonatomic) IBOutlet NSArray *dataa;
 @end
 
 
@@ -53,7 +52,6 @@
     
     for(int i =0;i<rowCount;i++){
         CardTableRowController* row = [self.card rowControllerAtIndex:i];
-        
         NSDictionary *dict = [plist objectAtIndex:i];
         
         
@@ -95,7 +93,6 @@
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
 
     NSDictionary *dict = [plist objectAtIndex:rowIndex];
-    NSLog(@"%@", dict);
     [self pushControllerWithName:@"SecondScreenInterfaceController" context:dict];
 }
 

@@ -13,4 +13,5 @@
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *labelll;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *number;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *balance;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *image;
 @end

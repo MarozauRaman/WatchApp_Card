@@ -10,7 +10,7 @@
 #import <WatchKit/WatchKit.h>
 
 @interface InfoTableRowController : NSObject
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *title;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *data;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labell;
 
 @end

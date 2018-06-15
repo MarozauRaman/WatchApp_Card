@@ -11,8 +11,7 @@
 
 @interface SecondScreenInterfaceController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *cardInfo;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *ExtractionButton;
-@property (weak, nonatomic) IBOutlet WKInterfaceButton *AboutCardButton;
+@property (nonatomic) NSDictionary *currentText;
 @end
 
 @implementation SecondScreenInterfaceController
@@ -21,12 +20,33 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Назад"];
-    NSLog(@"%@", context);
     NSDictionary *dict = (NSDictionary*) context;
-    NSLog(@"%@", dict);
+    _currentText = dict ;
     [_labelll setText:dict[@"Title"]];
+    [_balance setText:dict[@"Balance"]];
+    NSString *asterisks = @"****";
+    [_number setText:[asterisks stringByAppendingString:[dict[@"Number"] substringFromIndex:15]]];
     
+    
+    NSString* lowerKey = [dict[@"Title"] lowercaseString];
+    for(int i = 0;i<1; i++){
+    if ([lowerKey containsString:@"mastercard"]) {
+        [_image setImageNamed:@"mastercard.png"];
+        break;
+    }
+    if ([lowerKey containsString:@"visa"]){
+        [_image setImageNamed:@"visa.png"];
+        break;
+    }
+    if ([lowerKey containsString:@"maestro"]) {
+        [_image setImageNamed:@"maestro.png"];
+        break;
+    } else {
+        [_image setImageNamed:@"anyCard.png"];
+        break;
+      }
 
+    }
 }
 
 - (void)willActivate {
@@ -37,6 +57,13 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+- (IBAction)ExtractionButton {
+    
+    [self pushControllerWithName:@"ExtractionInterfaceController" context:_currentText];
+}
+- (IBAction)AboutCardButton {
+     [self pushControllerWithName:@"AboutCardInterfaceController" context:_currentText];
 }
 
 
