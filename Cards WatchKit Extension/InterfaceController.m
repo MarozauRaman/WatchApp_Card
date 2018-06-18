@@ -54,7 +54,7 @@
     
     for(int i =0;i<rowCount;i++){
         
-        Card* cardd = [plist objectAtIndex:i];
+        Card* cardd =[[Card alloc]initWithArray:[plist objectAtIndex:i]];
         
         
         NSLog(@"%@", cardd.name);
@@ -67,30 +67,7 @@
         [row.number setText:cardd.number];
         
         
-//        for(id key in dict){
-//            NSString* data = [dict objectForKey:key];
-//            NSArray *items=@[@"name",@"number",@"amount",@"imageName"];
-//            int pointr = [items indexOfObject:key];
-//
-//            switch (pointr) {
-//                case 0:{
-//                    [row.labell setText:data];
-//                    break;
-//                }
-//                case 1:{
-//                    [row.number setText:data];
-//                    break;
-//                }
-//                case 3:{
-//                    [row.image setImageNamed:data];
-//                    break;
-//                }
-//                default:{
-//                    break;
-//                }
-//            }
-//
-//        }
+
     }
 }
 
