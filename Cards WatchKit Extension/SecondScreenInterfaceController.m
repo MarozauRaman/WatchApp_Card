@@ -31,7 +31,7 @@
     NSString* lowerKey = [dict[@"name"] lowercaseString];
     for(int i = 0;i<1; i++){
     if ([lowerKey containsString:@"mastercard"]) {
-        [_image setImageNamed:@"mastercard.png"];
+        [_image setImageNamed:@"masterCard.png"];
         break;
     }
     if ([lowerKey containsString:@"visa"]){
@@ -42,7 +42,7 @@
         [_image setImageNamed:@"maestro.png"];
         break;
     } else {
-        [_image setImageNamed:@"anyCard.png"];
+        [_image setImageNamed:@"belcart.png"];
         break;
       }
 

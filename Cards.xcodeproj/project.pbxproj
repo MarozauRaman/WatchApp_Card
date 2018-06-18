@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */; };
 		AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
@@ -29,8 +28,9 @@
 		AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C020CFC7460068C8F0 /* CardTableRowController.m */; };
 		AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */; };
 		AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */; };
-		ADA3AC1A20D0EF0F00DB75D4 /* CardsExtractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */; };
 		ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB9274620D7957E00CCFA6B /* Cards.plist */; };
+		ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274A20D7AC6D00CCFA6B /* Card.m */; };
+		ADB9274E20D7AC7D00CCFA6B /* Statement.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274D20D7AC7D00CCFA6B /* Statement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,8 +218,11 @@
 		AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionTableRowController.m; sourceTree = "<group>"; };
 		AD5904C520CFD8A60068C8F0 /* InfoTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoTableRowController.h; sourceTree = "<group>"; };
 		AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoTableRowController.m; sourceTree = "<group>"; };
-		ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardsExtractions.plist; sourceTree = "<group>"; };
 		ADB9274620D7957E00CCFA6B /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cards.plist; path = ../../../Downloads/Cards.plist; sourceTree = "<group>"; };
+		ADB9274920D7AC6D00CCFA6B /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		ADB9274A20D7AC6D00CCFA6B /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		ADB9274C20D7AC7D00CCFA6B /* Statement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = "<group>"; };
+		ADB9274D20D7AC7D00CCFA6B /* Statement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Statement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,10 +294,10 @@
 		AD31F3DC20CE7CB2002EBE4C /* Cards WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ADB9274820D7AC2400CCFA6B /* Models */,
 				AD31F3E020CE7CB2002EBE4C /* ExtensionDelegate.h */,
 				AD31F3E120CE7CB2002EBE4C /* ExtensionDelegate.m */,
 				AD31F3E320CE7CB3002EBE4C /* Assets.xcassets */,
-				ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */,
 				ADB9274620D7957E00CCFA6B /* Cards.plist */,
 				AD31F3E520CE7CB3002EBE4C /* Info.plist */,
 				AD31F3DD20CE7CB2002EBE4C /* InterfaceController.h */,
@@ -718,6 +721,17 @@
 			path = specimen_files;
 			sourceTree = "<group>";
 		};
+		ADB9274820D7AC2400CCFA6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADB9274920D7AC6D00CCFA6B /* Card.h */,
+				ADB9274A20D7AC6D00CCFA6B /* Card.m */,
+				ADB9274C20D7AC7D00CCFA6B /* Statement.h */,
+				ADB9274D20D7AC7D00CCFA6B /* Statement.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -830,7 +844,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA3AC1A20D0EF0F00DB75D4 /* CardsExtractions.plist in Resources */,
 				AD31F3D220CE7CB2002EBE4C /* Assets.xcassets in Resources */,
 				AD31F3D020CE7CB2002EBE4C /* Interface.storyboard in Resources */,
 			);
@@ -841,7 +854,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */,
-				84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */,
 				AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */,
 				AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */,
 			);
@@ -867,8 +879,10 @@
 				AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */,
 				AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */,
 				AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */,
+				ADB9274E20D7AC7D00CCFA6B /* Statement.m in Sources */,
 				AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */,
 				AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */,
+				ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */,
 				AD31F3DF20CE7CB2002EBE4C /* InterfaceController.m in Sources */,
 				AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */,
 				AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */,
@@ -1047,7 +1061,6 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -1068,7 +1081,6 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};

@@ -9,6 +9,7 @@
 #import "InterfaceController.h"
 #import "CardTableRowController.h"
 #import "SecondScreenInterfaceController.h"
+#import "Card.h"
 
 
 @interface InterfaceController ()
@@ -40,65 +41,62 @@
 }
 -(void)configureTableWithData{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-
-
+    
+    
+    
     //number of rows
     int num = [plist count];
-
+    
     [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
     
     NSInteger rowCount = self.card.numberOfRows;
     
     
     for(int i =0;i<rowCount;i++){
+        
+        Card* cardd = [plist objectAtIndex:i];
+        
+        
+        NSLog(@"%@", cardd.name);
+        
         CardTableRowController* row = [self.card rowControllerAtIndex:i];
         NSDictionary *dict = [plist objectAtIndex:i];
         
+        [row.labell setText:cardd.name];
+        [row.image setImageNamed:cardd.imageName];
+        [row.number setText:cardd.number];
         
-        for(id key in dict){
-            NSString* data = [dict objectForKey:key];
-            NSArray *items=@[@"name",@"number",@"amount"];
-            int pointr = [items indexOfObject:key];
-
-            switch (pointr) {
-                case 0:{
-                    [row.labell setText:data];
-                    NSString* lowerKey = [data lowercaseString];
-                    if ([lowerKey containsString:@"mastercard"]) {
-                        [row.image setImageNamed:@"mastercard.png"];
-                        break;
-                    }
-                    if ([lowerKey containsString:@"visa"]){
-                        [row.image setImageNamed:@"visa.png"];
-                        break;
-                    }
-                    if ([lowerKey containsString:@"maestro"]) {
-                        [row.image setImageNamed:@"maestro.png"];
-                        break;
-                    } else {
-                        [row.image setImageNamed:@"anyCard.png"];
-                        break;
-                    }
-                    
-                    break;
-                }
-                case 1:{
-                    [row.number setText:data];
-
-                    break;
-                }
-                default:{
-                    break;
-                }
-            }
-            
-        }
+        
+//        for(id key in dict){
+//            NSString* data = [dict objectForKey:key];
+//            NSArray *items=@[@"name",@"number",@"amount",@"imageName"];
+//            int pointr = [items indexOfObject:key];
+//
+//            switch (pointr) {
+//                case 0:{
+//                    [row.labell setText:data];
+//                    break;
+//                }
+//                case 1:{
+//                    [row.number setText:data];
+//                    break;
+//                }
+//                case 3:{
+//                    [row.image setImageNamed:data];
+//                    break;
+//                }
+//                default:{
+//                    break;
+//                }
+//            }
+//
+//        }
     }
 }
 
 -(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-
+    
     NSDictionary *dict = [plist objectAtIndex:rowIndex];
     [self pushControllerWithName:@"SecondScreenInterfaceController" context:dict];
 }

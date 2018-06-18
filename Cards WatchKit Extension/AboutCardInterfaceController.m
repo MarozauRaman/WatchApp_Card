@@ -26,35 +26,52 @@
     NSDictionary* info =(NSDictionary*)context;
     int num = info.count;
     [self.cardAbout setNumberOfRows:num-1 withRowType:@"InfoTableRowController"];
-
+    int i=0;
+    while(i<(num-1)){
         
         for(id key in info){
             
             NSString* data = [info objectForKey:key];
 
-            if([key isEqual:@"Title"]){
-                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:0];
-                [row.labell setText:@"Название"];
-                [row.data setText:data];
-            }
-            if([key isEqual:@"Number"]){
-                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:1];
-                [row.labell setText:@"Номер"];
-                [row.data setText:data];
-            }
-            if([key isEqual:@"IBAN"]){
-                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:2];
-                [row.labell setText:@"IBAN"];
-                [row.data setText:data];
-            }
-            if([key isEqual:@"Term"]){
-                InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:3];
-                [row.labell setText:@"Срок действия карты"];
-                [row.data setText:data];
+            
+            NSArray *items=@[@"name",@"number",@"amount",@"imageName"];
+            int pointr = [items indexOfObject:key];
+            InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:pointr];
+            switch (pointr) {
+                case 0:{
+                    
+                    [row.labell setText:@"Название"];
+                    [row.data setText:data];
+                    break;
+                }
+                case 1:{
+               
+                    [row.labell setText:@"Номер"];
+                    [row.data setText:data];
+                    break;
+                }
+                    
+                case 2:{
+                    [row.labell setText:@"IBAN"];
+                    [row.data setText:@"IBAN Number"];
+                    
+                    break;
+                }
+                case 3:{
+                    [row.labell setText:@"Срок действия карты"];
+                    [row.data setText:@"Term"];
+                }
+                default:{
+                    break;
+                }
+                    
             }
             
-            
+            i++;
+        
         }
+        
+    }
     
 }
 
