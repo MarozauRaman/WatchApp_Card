@@ -41,7 +41,7 @@
 -(void)configureTableWithData{
     NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
 
-    NSString *asterisks = @"****";
+
     //number of rows
     int num = [plist count];
 
@@ -57,36 +57,43 @@
         
         for(id key in dict){
             NSString* data = [dict objectForKey:key];
-            if([key  isEqual: @"Title"]){
-                [row.labell setText:data];
-                NSString* lowerKey = [data lowercaseString];
-                
-           
-                if ([lowerKey containsString:@"mastercard"]) {
-                    [row.image setImageNamed:@"mastercard.png"];
+            NSArray *items=@[@"name",@"number",@"amount"];
+            int pointr = [items indexOfObject:key];
+
+            switch (pointr) {
+                case 0:{
+                    [row.labell setText:data];
+                    NSString* lowerKey = [data lowercaseString];
+                    if ([lowerKey containsString:@"mastercard"]) {
+                        [row.image setImageNamed:@"mastercard.png"];
+                        break;
+                    }
+                    if ([lowerKey containsString:@"visa"]){
+                        [row.image setImageNamed:@"visa.png"];
+                        break;
+                    }
+                    if ([lowerKey containsString:@"maestro"]) {
+                        [row.image setImageNamed:@"maestro.png"];
+                        break;
+                    } else {
+                        [row.image setImageNamed:@"anyCard.png"];
+                        break;
+                    }
+                    
                     break;
                 }
-                if ([lowerKey containsString:@"visa"]){
-                    [row.image setImageNamed:@"visa.png"];
+                case 1:{
+                    [row.number setText:data];
+
                     break;
                 }
-                if ([lowerKey containsString:@"maestro"]) {
-                    [row.image setImageNamed:@"maestro.png"];
-                    break;
-                } else {
-                    [row.image setImageNamed:@"anyCard.png"];
+                default:{
                     break;
                 }
-                
-            }
-            if([key isEqual:@"Number"]){
-                [row.number setText:[asterisks stringByAppendingString:[data substringFromIndex:15]]];
             }
             
         }
-        
     }
-    
 }
 
 -(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{

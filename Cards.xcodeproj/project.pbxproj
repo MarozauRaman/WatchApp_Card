@@ -26,12 +26,11 @@
 		AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48920CE8CE6002EBE4C /* SecondScreenInterfaceController.m */; };
 		AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */; };
 		AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */; };
-		AD5904B820CFAA9A0068C8F0 /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD5904B720CFAA9A0068C8F0 /* Cards.plist */; };
 		AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C020CFC7460068C8F0 /* CardTableRowController.m */; };
 		AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */; };
 		AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */; };
 		ADA3AC1A20D0EF0F00DB75D4 /* CardsExtractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */; };
-		ADC6C54E20D12EBC008F1E52 /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD5904B720CFAA9A0068C8F0 /* Cards.plist */; };
+		ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB9274620D7957E00CCFA6B /* Cards.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,7 +212,6 @@
 		AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtractionInterfaceController.m; sourceTree = "<group>"; };
 		AD31F48E20CE8DA1002EBE4C /* AboutCardInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutCardInterfaceController.h; sourceTree = "<group>"; };
 		AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutCardInterfaceController.m; sourceTree = "<group>"; };
-		AD5904B720CFAA9A0068C8F0 /* Cards.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Cards.plist; path = "Cards WatchKit Extension/Cards.plist"; sourceTree = SOURCE_ROOT; };
 		AD5904BF20CFC7450068C8F0 /* CardTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardTableRowController.h; sourceTree = "<group>"; };
 		AD5904C020CFC7460068C8F0 /* CardTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardTableRowController.m; sourceTree = "<group>"; };
 		AD5904C220CFD80D0068C8F0 /* TransactionTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionTableRowController.h; sourceTree = "<group>"; };
@@ -221,6 +219,7 @@
 		AD5904C520CFD8A60068C8F0 /* InfoTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoTableRowController.h; sourceTree = "<group>"; };
 		AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoTableRowController.m; sourceTree = "<group>"; };
 		ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardsExtractions.plist; sourceTree = "<group>"; };
+		ADB9274620D7957E00CCFA6B /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cards.plist; path = ../../../Downloads/Cards.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +295,7 @@
 				AD31F3E120CE7CB2002EBE4C /* ExtensionDelegate.m */,
 				AD31F3E320CE7CB3002EBE4C /* Assets.xcassets */,
 				ADA3AC1920D0EF0F00DB75D4 /* CardsExtractions.plist */,
-				AD5904B720CFAA9A0068C8F0 /* Cards.plist */,
+				ADB9274620D7957E00CCFA6B /* Cards.plist */,
 				AD31F3E520CE7CB3002EBE4C /* Info.plist */,
 				AD31F3DD20CE7CB2002EBE4C /* InterfaceController.h */,
 				AD31F3DE20CE7CB2002EBE4C /* InterfaceController.m */,
@@ -832,7 +831,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA3AC1A20D0EF0F00DB75D4 /* CardsExtractions.plist in Resources */,
-				AD5904B820CFAA9A0068C8F0 /* Cards.plist in Resources */,
 				AD31F3D220CE7CB2002EBE4C /* Assets.xcassets in Resources */,
 				AD31F3D020CE7CB2002EBE4C /* Interface.storyboard in Resources */,
 			);
@@ -842,8 +840,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */,
 				84BFC21820D1A3700031C538 /* CardsExtractions.plist in Resources */,
-				ADC6C54E20D12EBC008F1E52 /* Cards.plist in Resources */,
 				AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */,
 				AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */,
 			);

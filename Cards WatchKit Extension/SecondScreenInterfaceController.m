@@ -22,13 +22,13 @@
     [self setTitle:@"Назад"];
     NSDictionary *dict = (NSDictionary*) context;
     _currentText = dict ;
-    [_labelll setText:dict[@"Title"]];
-    [_balance setText:dict[@"Balance"]];
-    NSString *asterisks = @"****";
-    [_number setText:[asterisks stringByAppendingString:[dict[@"Number"] substringFromIndex:15]]];
+    [_labelll setText:dict[@"name"]];
+    [_balance setText:[dict[@"amount"] stringByAppendingString:@" BYN"]];
+    
+    [_number setText:dict[@"number"]];
     
     
-    NSString* lowerKey = [dict[@"Title"] lowercaseString];
+    NSString* lowerKey = [dict[@"name"] lowercaseString];
     for(int i = 0;i<1; i++){
     if ([lowerKey containsString:@"mastercard"]) {
         [_image setImageNamed:@"mastercard.png"];

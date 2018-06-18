@@ -25,44 +25,57 @@
     // Configure interface objects here.
     [self setTitle:@"Выписка"];
     NSDictionary* sourceDict =(NSDictionary*)context;
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CardsExtractions" ofType:@"plist"]];
-    int num = [plist count];
+  
     NSMutableArray* arrayWithDictionaries=[[NSMutableArray alloc]init] ;
+    [arrayWithDictionaries addObjectsFromArray:sourceDict[@"statement"]];
+    
     int counter = 0;
-    for (int i=0;i<num;i++){
-        NSDictionary* dict = [plist objectAtIndex:i];
-        for (id key in dict){
-            NSString* data = [dict objectForKey:key];
-            if([data isEqualToString:sourceDict[@"Number"]]){
+    for (int i=0;i<arrayWithDictionaries.count;i++){
+        NSDictionary* dict = [arrayWithDictionaries objectAtIndex:i];
+       
+            NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+            [dateFormat setDateFormat:@"dd.MM.yyyy"];
+            NSDate *datee = [dateFormat dateFromString:dict[@"date"]];
+            if([datee timeIntervalSinceNow] > -806400){
                 counter = counter+1;
-            [arrayWithDictionaries addObject:[plist objectAtIndex:i]];
-                break;
+                
             }
-        }
+        
     }
+  
     [self.extractionCard setNumberOfRows:counter withRowType:@"TransactionTableRowController"];
         
     if(counter!=0){
+        
+    
         [_noDataLabel setHidden:true];
-        for (int i =0; i<arrayWithDictionaries.count; i++) {
+
+        for (int i =0; i<counter; i++) {
             TransactionTableRowController* row = [self.extractionCard rowControllerAtIndex:i];
             NSDictionary* dict = [arrayWithDictionaries objectAtIndex:i];
-            for(id key in dict){
-                 NSString* data = [dict objectForKey:key];
-                if([key isEqualToString:@"Money"]){
-                    [row.money setText:data];
-
-                }
-                if([key isEqualToString:@"Text"]){
-                    [row.text setText:data];
-
-                }
-                if([key isEqualToString:@"Date"]){
-                    [row.date setText:data];
-
-                }
+          
+            NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+            [dateFormat setDateFormat:@"dd.MM.yyyy"];
+            NSDate *datee = [dateFormat dateFromString:dict[@"date"]];
+                if([datee timeIntervalSinceNow] > -806400){
+                
+                 [row.date setText:dict[@"date"]];
+                
+                
+                 
+             [row.money setText:[dict[@"amount"] stringByAppendingString:@" BYN"]];
+                if([[dict[@"amount"] substringToIndex:1] isEqualToString:@"-"]){
+                        [row.money setTextColor:[UIColor colorWithRed:0.96 green:0.74 blue:0.42 alpha:1.0]];
+                          } else {
+                         [row.money setTextColor:[UIColor colorWithRed:0.55 green:0.81 blue:0.39 alpha:1.0]];
+                        }
+                
+                [row.text setText:dict[@"desc"]];
+                    }
+                
             }
-        }
+
+        
     } else{
         [_forWeekLabel setHidden:true];
         [_noDataLabel setText:@"No transactions "];
