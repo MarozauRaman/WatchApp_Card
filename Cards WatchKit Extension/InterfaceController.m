@@ -15,6 +15,8 @@
 @interface InterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *card;
+@property (nonatomic) Card *cardd;
+@property NSArray *cards;
 @end
 
 
@@ -40,43 +42,31 @@
     [super didDeactivate];
 }
 -(void)configureTableWithData{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-    
-    
-    
-    //number of rows
-    int num = [plist count];
-    
-    [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
-    
-    NSInteger rowCount = self.card.numberOfRows;
-    
-    
-    for(int i =0;i<rowCount;i++){
-        
-        Card* cardd =[[Card alloc]initWithArray:[plist objectAtIndex:i]];
-        
-        
-        NSLog(@"%@", cardd.name);
-        
-        CardTableRowController* row = [self.card rowControllerAtIndex:i];
-        NSDictionary *dict = [plist objectAtIndex:i];
-        
-        [row.labell setText:cardd.name];
-        [row.image setImageNamed:cardd.imageName];
-        [row.number setText:cardd.number];
-        
-        
 
+     _cards = [[Card alloc]allCards];
+    //number of rows
+    int num = [_cards count];
+    [self.card setNumberOfRows:num withRowType:@"CardTableRowController"];
+    NSInteger rowCount = self.card.numberOfRows;
+    for(int i =0;i<rowCount;i++){
+      
+       _cardd =[[Card alloc]initWithDictionary:[_cards objectAtIndex:i]];
+        CardTableRowController* row = [self.card rowControllerAtIndex:i];
+        [row.labell setText:_cardd.name];
+        [row.image setImageNamed:_cardd.imageName];
+        [row.number setText:_cardd.number];
+        
     }
+   
 }
 
 -(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-    
-    NSDictionary *dict = [plist objectAtIndex:rowIndex];
-    [self pushControllerWithName:@"SecondScreenInterfaceController" context:dict];
+
+   [self pushControllerWithName:@"SecondScreenInterfaceController" context:[_cards objectAtIndex:rowIndex]];
+
 }
+
+
 
 @end
 

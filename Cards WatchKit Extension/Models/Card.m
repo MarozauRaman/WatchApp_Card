@@ -10,7 +10,7 @@
 
 @implementation Card
 //-(id)initWithArray:(Statement *)statement name:(NSString *)name number:(NSString *)number amount:(NSString *)amount imageName:(NSString *)imageName {
--(instancetype)initWithArray:(NSDictionary*)dict {
+-(instancetype)initWithDictionary:(NSDictionary*)dict {
     self = [super init];
     if(self){
         self.name = dict[@"name"];
@@ -21,6 +21,12 @@
     }
     
     return self;
+}
+
+-(NSArray*)allCards{
+    
+    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
+    return plist;
 }
 
 

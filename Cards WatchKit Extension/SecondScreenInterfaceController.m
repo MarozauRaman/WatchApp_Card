@@ -7,11 +7,13 @@
 //
 
 #import "SecondScreenInterfaceController.h"
+#import "Card.h"
 
 
 @interface SecondScreenInterfaceController ()
 @property (weak, nonatomic) IBOutlet WKInterfaceTable *cardInfo;
-@property (nonatomic) NSDictionary *currentText;
+@property (nonatomic) Card *card;
+
 @end
 
 @implementation SecondScreenInterfaceController
@@ -20,33 +22,15 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Назад"];
-    NSDictionary *dict = (NSDictionary*) context;
-    _currentText = dict ;
-    [_labelll setText:dict[@"name"]];
-    [_balance setText:[dict[@"amount"] stringByAppendingString:@" BYN"]];
     
-    [_number setText:dict[@"number"]];
+    _card = [[Card alloc]initWithDictionary:context];
+    [_labelll setText:_card.name];
+    [_balance setText:[_card.amount stringByAppendingString:@" BYN"]];
+    [_number setText:_card.number];
+    [_image setImageNamed:_card.imageName];
     
     
-    NSString* lowerKey = [dict[@"name"] lowercaseString];
-    for(int i = 0;i<1; i++){
-    if ([lowerKey containsString:@"mastercard"]) {
-        [_image setImageNamed:@"masterCard.png"];
-        break;
-    }
-    if ([lowerKey containsString:@"visa"]){
-        [_image setImageNamed:@"visa.png"];
-        break;
-    }
-    if ([lowerKey containsString:@"maestro"]) {
-        [_image setImageNamed:@"maestro.png"];
-        break;
-    } else {
-        [_image setImageNamed:@"belcart.png"];
-        break;
-      }
-
-    }
+    
 }
 
 - (void)willActivate {
@@ -60,10 +44,10 @@
 }
 - (IBAction)ExtractionButton {
     
-    [self pushControllerWithName:@"ExtractionInterfaceController" context:_currentText];
+    [self pushControllerWithName:@"ExtractionInterfaceController" context:_card.statement];
 }
 - (IBAction)AboutCardButton {
-     [self pushControllerWithName:@"AboutCardInterfaceController" context:_currentText];
+    [self pushControllerWithName:@"AboutCardInterfaceController" context:_card];
 }
 
 

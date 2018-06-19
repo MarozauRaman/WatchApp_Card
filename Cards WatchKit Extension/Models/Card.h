@@ -17,9 +17,7 @@
 @property(nonatomic,strong) NSString* imageName;
 @property(nonatomic,strong) Statement* statement;
 
-//-(id)initWithArray:(Statement*)statement
-//              name:(NSString*)name
-//            number:(NSString*)number amount:(NSString*)amount
-//         imageName:(NSString*)imageName;
--(instancetype)initWithArray:(NSDictionary*)dict;
+
+-(instancetype)initWithDictionary:(NSDictionary*)dict;
+-(NSArray*)allCards;
 @end

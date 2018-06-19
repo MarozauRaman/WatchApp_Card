@@ -18,4 +18,13 @@
     }
     return self;
 }
+-(id)initWithArray:(NSArray*) array{
+   Statement *sta=[[Statement alloc]init];
+    for (NSDictionary *dict in array) {
+        sta = [sta initWithDict:dict];
+        
+    }
+    return sta;
+}
+
 @end

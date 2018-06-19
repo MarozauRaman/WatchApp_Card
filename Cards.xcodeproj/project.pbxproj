@@ -30,7 +30,7 @@
 		AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */; };
 		ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB9274620D7957E00CCFA6B /* Cards.plist */; };
 		ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274A20D7AC6D00CCFA6B /* Card.m */; };
-		ADB9274E20D7AC7D00CCFA6B /* Statement.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274D20D7AC7D00CCFA6B /* Statement.m */; };
+		ADF4352A20D8F3AD00F541EE /* Statement.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4352920D8F3AD00F541EE /* Statement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,7 +222,7 @@
 		ADB9274920D7AC6D00CCFA6B /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		ADB9274A20D7AC6D00CCFA6B /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		ADB9274C20D7AC7D00CCFA6B /* Statement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = "<group>"; };
-		ADB9274D20D7AC7D00CCFA6B /* Statement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Statement.m; sourceTree = "<group>"; };
+		ADF4352920D8F3AD00F541EE /* Statement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,7 +727,7 @@
 				ADB9274920D7AC6D00CCFA6B /* Card.h */,
 				ADB9274A20D7AC6D00CCFA6B /* Card.m */,
 				ADB9274C20D7AC7D00CCFA6B /* Statement.h */,
-				ADB9274D20D7AC7D00CCFA6B /* Statement.m */,
+				ADF4352920D8F3AD00F541EE /* Statement.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -879,7 +879,7 @@
 				AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */,
 				AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */,
 				AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */,
-				ADB9274E20D7AC7D00CCFA6B /* Statement.m in Sources */,
+				ADF4352A20D8F3AD00F541EE /* Statement.m in Sources */,
 				AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */,
 				AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */,
 				ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */,

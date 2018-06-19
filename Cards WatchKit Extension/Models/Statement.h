@@ -15,4 +15,5 @@
 @property(nonatomic,strong) NSString* date;
 
 -(id)initWithDict:(NSDictionary*)dict;
+-(id)initWithArray:(NSArray*) array;
 @end
