@@ -53,7 +53,6 @@
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *datee = [dateFormat dateFromString:_statement.date];
         if([datee timeIntervalSinceNow] > -806400){
-             NSLog(@"%@", _statement.date);
             [row.date setText:_statement.date];
             [row.money setText:[_statement.amount stringByAppendingString:@" BYN"]];
             if([[_statement.amount substringToIndex:1] isEqualToString:@"-"]){
