@@ -14,10 +14,7 @@
 @interface AboutCardInterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *cardAbout;
-
 @property (nonatomic) Card *card;
-
-
 @end
 
 @implementation AboutCardInterfaceController
@@ -26,8 +23,6 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"О карте"];
-    
-    
     
    _card = [[Card alloc]init];
     _card=context;

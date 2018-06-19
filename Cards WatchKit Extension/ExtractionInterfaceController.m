@@ -28,6 +28,7 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     [self setTitle:@"Выписка"];
+    
     int counter = 0;
     for (NSDictionary *statemen in context) {
     _statement = [[Statement alloc]initWithDict:statemen];
@@ -35,7 +36,6 @@
     [dateFormat setDateFormat:@"dd.MM.yyyy"];
     NSDate *datee = [dateFormat dateFromString:_statement.date];
     if([datee timeIntervalSinceNow] > -806400){
-        
         counter++;
     }
     }
@@ -44,11 +44,13 @@
    
         
     if(counter!=0){
+         [_noDataLabel setHidden:true];
         for(int i=0;i<counter;){
     for (NSDictionary *statemen in context) {
         _statement = [[Statement alloc]initWithDict:statemen];
-        [_noDataLabel setHidden:true];
+       
         TransactionTableRowController* row = [self.extractionCard rowControllerAtIndex:i];
+        
         NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *datee = [dateFormat dateFromString:_statement.date];
@@ -69,7 +71,7 @@
     }
     }else{
         [_forWeekLabel setHidden:true];
-        [_noDataLabel setText:@"No transactions "];
+        [_noDataLabel setText:@"Не было операций за прошлую неделю"];
     }
 
     

@@ -173,7 +173,7 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <label height="20" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Svn-k7-NtD"/>
+                        <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Svn-k7-NtD"/>
                     </items>
                     <color key="backgroundColor" red="0.1333333333" green="0.1764705882" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
