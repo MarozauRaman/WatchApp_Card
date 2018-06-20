@@ -15,8 +15,7 @@
 @interface InterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
-@property (strong, nonatomic) Card *cardd;
-@property (strong, nonatomic) NSArray *cards;
+@property (strong, nonatomic) NSMutableArray *cards;
 
 @end
 
@@ -28,9 +27,6 @@
     // Configure interface objects here.
 
     [self configureTableWithData];
-    
-    
-    
 }
 
 - (void)willActivate {
@@ -43,20 +39,22 @@
     [super didDeactivate];
 }
 -(void)configureTableWithData{
-    self.cards=[[Card alloc]allCards];
-    [self.table setNumberOfRows:[self.cards count] withRowType:@"CardTableRowController"];
 
+    [self.table setNumberOfRows:[self.cards count] withRowType:@"CardTableRowController"];
+    NSLog(@"%@", self.cards);
     for(int i =0;i<[self.cards count];i++){
-       _cardd =[[Card alloc]initWithDictionary:[_cards objectAtIndex:i]];
+        Card* card=self.cards[i];
         CardTableRowController* row = [self.table rowControllerAtIndex:i];
-        [row.labell setText:_cardd.name];
-        [row.image setImageNamed:_cardd.imageName];
-        [row.number setText:_cardd.number];
+        [row.labell setText:card.name];
+        
+        [row.image setImageNamed:card.imageName];
+        [row.number setText:card.number];
+        
         
    //
         NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
-        NSDate *date = [dateFormat dateFromString:_cardd.term];
+        NSDate *date = [dateFormat dateFromString:card.term];
     
         if([date timeIntervalSinceNow] < 259200){
             [row.labell setTextColor:[UIColor colorWithRed:0.91 green:0.96 blue:0.40 alpha:1.0]];
@@ -76,21 +74,22 @@
 
 }
 
+#pragma mark - Init cards
 
+-(NSMutableArray*)cards {
+    if (!_cards) {
+        _cards =[NSMutableArray array];
+        NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
+        for (NSDictionary* dict in plist) {
+            Card* card = [[Card alloc] initWithDictionary:dict];
+            [_cards addObject:card];
+        }
+    }
+    return _cards;
+}
 
 
 @end
 
 
-//#pragma mark - Inits
-//- (NSMutableArray *)cards {
-//    if (!_cards) {
-//        _cards = [NSMutableArray array];
-//        NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-//        for (NSDictionary* dict in plist) {
-//            Card* card = [[Card alloc] initWithDictionary:dict];
-//            [_cards addObject:card];
-//        }
-//    }
-//    return _cards;
-//}
+
