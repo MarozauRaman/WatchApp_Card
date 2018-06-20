@@ -1,17 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "watch",
       "filename" : "Maestro_logo.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
       "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {

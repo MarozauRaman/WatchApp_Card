@@ -11,7 +11,10 @@
 
 
 @interface SecondScreenInterfaceController ()
-@property (weak, nonatomic) IBOutlet WKInterfaceTable *cardInfo;
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *labelll;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *number;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *balance;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *image;
 @property (nonatomic) Card *card;
 
 @end
@@ -21,7 +24,6 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     // Configure interface objects here.
-    [self setTitle:@"Назад"];
     
     _card = [[Card alloc]initWithDictionary:context];
     [_labelll setText:_card.name];
@@ -43,7 +45,6 @@
     [super didDeactivate];
 }
 - (IBAction)ExtractionButton {
-    
     [self pushControllerWithName:@"ExtractionInterfaceController" context:_card.statement];
 }
 - (IBAction)AboutCardButton {

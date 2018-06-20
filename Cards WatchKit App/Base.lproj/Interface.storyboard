@@ -9,8 +9,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Lato-Bold.ttf">
-            <string>Lato-Bold</string>
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
         </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
@@ -20,12 +20,12 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Interface Controller-->
+        <!--Bank-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller title="Bank" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <table alignment="left" id="W3c-Je-kNV" customClass="Card">
+                        <table alignment="left" id="W3c-Je-kNV">
                             <items>
                                 <tableRow identifier="CardTableRowController" id="faF-tb-IJE" customClass="CardTableRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" radius="5" spacing="5" id="XDQ-Tu-Z5U">
@@ -40,7 +40,7 @@
                                                     </group>
                                                 </items>
                                             </group>
-                                            <group alignment="left" layout="vertical" id="C2a-8W-hcE">
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="C2a-8W-hcE">
                                                 <items>
                                                     <label alignment="left" accessibilityLabel="title" accessibilityIdentifier="titl" text="Label" textAlignment="left" minimumScaleFactor="0.0" id="Dax-zw-r4R" userLabel="title">
                                                         <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="15"/>
@@ -50,6 +50,7 @@
                                                         <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                     </label>
                                                 </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                                             </group>
                                         </items>
                                         <color key="backgroundColor" red="0.24313725490196078" green="0.28235294117647058" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,16 +66,16 @@
                     </items>
                     <color key="backgroundColor" red="0.13333333333333333" green="0.17647058823529413" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <outlet property="card" destination="W3c-Je-kNV" id="Lzq-RA-qWV"/>
+                        <outlet property="table" destination="W3c-Je-kNV" id="0k9-jQ-aXC"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-8.717948717948719" y="26.589743589743591"/>
         </scene>
-        <!--SecondScreenInterfaceController-->
+        <!--Назад-->
         <scene sceneID="hZP-6u-gCJ">
             <objects>
-                <controller identifier="SecondScreenInterfaceController" id="Ad8-gV-Eyv" customClass="SecondScreenInterfaceController">
+                <controller identifier="SecondScreenInterfaceController" title="Назад" id="Ad8-gV-Eyv" customClass="SecondScreenInterfaceController">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="kE4-YY-6K8">
                             <items>
@@ -96,11 +97,11 @@
                                             <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="13"/>
                                         </label>
                                         <label alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="hpf-EL-jCK">
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="font" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="font" name="Lato-Black" family="Lato" pointSize="23"/>
                                         </label>
                                     </items>
-                                    <edgeInsets key="margins" left="5" right="0.0" top="0.0" bottom="0.0"/>
+                                    <edgeInsets key="margins" left="5" right="0.0" top="0.0" bottom="2"/>
                                 </group>
                             </items>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -110,12 +111,14 @@
                             <items>
                                 <button width="1" alignment="left" title="Выписка" id="rUn-gt-WDU">
                                     <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                     <connections>
                                         <action selector="ExtractionButton" destination="Ad8-gV-Eyv" id="jWl-yt-nqF"/>
                                     </connections>
                                 </button>
                                 <button width="1" alignment="left" title="О карте" id="SuP-zf-oZK">
                                     <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                     <connections>
                                         <action selector="AboutCardButton" destination="Ad8-gV-Eyv" id="jSv-2l-1Yv"/>
                                     </connections>
@@ -137,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="295.53846153846155" y="30.07692307692308"/>
         </scene>
-        <!--ExtractionInterfaceController-->
+        <!--Выписка-->
         <scene sceneID="Bxt-qA-Abu">
             <objects>
-                <controller identifier="ExtractionInterfaceController" id="OMq-dp-Dhm" customClass="ExtractionInterfaceController">
+                <controller identifier="ExtractionInterfaceController" title="Выписка" id="OMq-dp-Dhm" customClass="ExtractionInterfaceController">
                     <items>
                         <label alignment="center" text="За неделю" textAlignment="center" baselineAdjustment="alignCenters" id="nrK-j6-coe">
                             <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
@@ -156,7 +159,7 @@
                                             </label>
                                             <label alignment="left" text="Text2" numberOfLines="0" id="fSW-cB-Rhx">
                                                 <color key="textColor" red="0.60392156862745094" green="0.63137254901960782" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                             </label>
                                             <label alignment="left" text="Text3" id="YHG-yj-iDF">
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,6 +167,7 @@
                                             </label>
                                         </items>
                                         <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <edgeInsets key="margins" left="3" right="0.0" top="3" bottom="5"/>
                                     </group>
                                     <connections>
                                         <outlet property="date" destination="YHG-yj-iDF" id="Yri-dR-LwD"/>
@@ -173,22 +177,24 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Svn-k7-NtD"/>
+                        <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Svn-k7-NtD">
+                            <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        </label>
                     </items>
                     <color key="backgroundColor" red="0.1333333333" green="0.1764705882" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <outlet property="extractionCard" destination="3iL-BU-H8N" id="BO7-iy-2EA"/>
                         <outlet property="forWeekLabel" destination="nrK-j6-coe" id="ofB-d5-5t1"/>
                         <outlet property="noDataLabel" destination="Svn-k7-NtD" id="MXu-6l-Xrn"/>
+                        <outlet property="table" destination="3iL-BU-H8N" id="gf2-lw-bjr"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="601.53846153846155" y="-196.58974358974359"/>
         </scene>
-        <!--AboutCardInterfaceController-->
+        <!--О карте-->
         <scene sceneID="2H4-5a-jnG">
             <objects>
-                <controller identifier="AboutCardInterfaceController" id="3C6-V4-q9c" customClass="AboutCardInterfaceController">
+                <controller identifier="AboutCardInterfaceController" title="О карте" id="3C6-V4-q9c" customClass="AboutCardInterfaceController">
                     <items>
                         <table alignment="left" id="kHv-Nk-UiF">
                             <items>
@@ -197,13 +203,14 @@
                                         <items>
                                             <label alignment="left" text="Label" numberOfLines="0" id="4J3-Wi-rIX">
                                                 <color key="textColor" red="0.58431372549019611" green="0.61176470588235299" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                             </label>
                                             <label alignment="left" text="Label" numberOfLines="0" id="6as-Td-nVT">
-                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                <fontDescription key="font" name="Lato-Regular" family="Lato" pointSize="17"/>
                                             </label>
                                         </items>
                                         <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <edgeInsets key="margins" left="4" right="0.0" top="0.0" bottom="3"/>
                                     </group>
                                     <connections>
                                         <outlet property="data" destination="6as-Td-nVT" id="Pxq-Ci-poE"/>
@@ -215,7 +222,7 @@
                     </items>
                     <color key="backgroundColor" red="0.1333333333" green="0.1764705882" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <outlet property="cardAbout" destination="kHv-Nk-UiF" id="Z3P-1E-x1r"/>
+                        <outlet property="table" destination="kHv-Nk-UiF" id="Qkk-MM-kXf"/>
                     </connections>
                 </controller>
             </objects>

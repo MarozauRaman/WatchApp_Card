@@ -13,7 +13,7 @@
 
 @interface AboutCardInterfaceController ()
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *cardAbout;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
 @property (nonatomic) Card *card;
 @end
 
@@ -22,13 +22,13 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     // Configure interface objects here.
-    [self setTitle:@"О карте"];
+
     
    _card = [[Card alloc]init];
     _card=context;
-    [self.cardAbout setNumberOfRows:4 withRowType:@"InfoTableRowController"];
+    [self.table setNumberOfRows:4 withRowType:@"InfoTableRowController"];
     for(int i=0;i<4;i++){
-            InfoTableRowController* row = [self.cardAbout rowControllerAtIndex:i];
+            InfoTableRowController* row = [self.table rowControllerAtIndex:i];
             switch (i) {
                 case 0:{
                     [row.labell setText:@"Название"];
@@ -48,7 +48,7 @@
                 }
                 case 3:{
                     [row.labell setText:@"Срок действия карты"];
-                    [row.data setText:@"Term"];
+                    [row.data setText:_card.term];
                 }
                 default:{
                     break;

@@ -9,7 +9,7 @@
 #import "Card.h"
 
 @implementation Card
-//-(id)initWithArray:(Statement *)statement name:(NSString *)name number:(NSString *)number amount:(NSString *)amount imageName:(NSString *)imageName {
+
 -(instancetype)initWithDictionary:(NSDictionary*)dict {
     self = [super init];
     if(self){
@@ -18,6 +18,7 @@
         self.amount = dict[@"amount"];
         self.number = dict[@"number"];
         self.statement = dict[@"statement"];
+        self.term=dict[@"term"];
     }
     
     return self;
@@ -29,5 +30,34 @@
     return plist;
 }
 
+@end
+
+@implementation Statement
+-(id)initWithDict:(NSDictionary *)dict{
+    self=[super init];
+    if(self){
+        [self setAmount:dict[@"amount"]];
+        [self setDate:dict[@"date"]];
+        [self setDesc:dict[@"desc"]];
+    }
+    return self;
+}
+
+-(NSArray*)statementsForWeek:(id)context{
+    
+    NSMutableArray *arrayOfStatemnts=[[NSMutableArray alloc]init];
+    for (NSDictionary *statemen in context) {
+        Statement *statement = [[Statement alloc]initWithDict:statemen];
+        NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"dd.MM.yyyy"];
+        NSDate *datee = [dateFormat dateFromString:statement.date];
+        if([datee timeIntervalSinceNow] > -806400){
+            [arrayOfStatemnts addObject:statemen];
+        }
+        
+    }
+    
+    return arrayOfStatemnts;
+}
 
 @end
