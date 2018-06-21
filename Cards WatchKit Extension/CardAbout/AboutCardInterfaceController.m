@@ -8,7 +8,6 @@
 
 #import "AboutCardInterfaceController.h"
 #import "InfoTableRowController.h"
-#import "CardDetailInterfaceController.h"
 #import "Card.h"
 
 @interface AboutCardInterfaceController ()

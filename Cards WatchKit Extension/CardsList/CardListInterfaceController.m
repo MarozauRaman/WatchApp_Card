@@ -36,10 +36,6 @@
         NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *date = [dateFormat dateFromString:card.term];
-        
-        if([date timeIntervalSinceNow] < 259200){
-            [row.label setTextColor:[UIColor colorWithRed:0.91 green:0.96 blue:0.40 alpha:1.0]];
-        }
         if([date timeIntervalSinceNow] < 0){
             [row.label setTextColor:[UIColor colorWithRed:1.00 green:0.25 blue:0.21 alpha:1.0]];
         }
@@ -55,7 +51,7 @@
 
 -(NSMutableArray*)cards {
     if (!_cards) {
-        _cards =[NSMutableArray array];
+        _cards =[[NSMutableArray alloc]init];
         NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
         for (NSDictionary* dict in plist) {
             Card* card = [[Card alloc] initWithDictionary:dict];

@@ -29,11 +29,5 @@
 	<string>com.roman.Cards</string>
 	<key>WKWatchKitApp</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Lato-Regular.ttf</string>
-		<string>Roboto-Regular-webfont.ttf</string>
-		<string>Roboto-Black-webfont.ttf</string>
-	</array>
 </dict>
 </plist>

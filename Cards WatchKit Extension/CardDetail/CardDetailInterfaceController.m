@@ -16,7 +16,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* titleOfCard;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* number;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* balance;
-@property(strong,nonatomic) Card* currentCard;
+@property (strong,nonatomic) Card* currentCard;
 
 @end
 

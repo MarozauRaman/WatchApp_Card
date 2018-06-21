@@ -42,6 +42,7 @@
             } else {
                 [row.money setTextColor:[UIColor colorWithRed:0.55 green:0.81 blue:0.39 alpha:1.0]];
             }
+            
         }
     }else{
         [_forWeekLabel setHidden:true];
