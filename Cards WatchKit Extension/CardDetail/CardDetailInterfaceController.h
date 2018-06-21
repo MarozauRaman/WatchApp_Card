@@ -1,5 +1,5 @@
 //
-//  ExtractionInterfaceController.h
+//  SecondScreenInterfaceController.h
 //  Cards WatchKit Extension
 //
 //  Created by Practice on 11.06.2018.
@@ -9,6 +9,6 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 
-@interface ExtractionInterfaceController : WKInterfaceController
+@interface CardDetailInterfaceController : WKInterfaceController
 
 @end

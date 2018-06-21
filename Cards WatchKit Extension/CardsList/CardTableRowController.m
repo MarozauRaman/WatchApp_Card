@@ -7,8 +7,6 @@
 //
 
 #import "CardTableRowController.h"
-#import "InterfaceController.h"
-
 
 @implementation CardTableRowController
 

@@ -13,16 +13,14 @@
 
 @interface Card : NSObject
 
-@property(nonatomic,weak) NSString* name;
+@property(nonatomic,strong) NSString* name;
 @property(nonatomic,strong) NSString* number;
 @property(nonatomic,strong) NSString* amount;
 @property(nonatomic,strong) NSString* imageName;
 @property(nonatomic,strong) NSString* term;
-@property(strong,nonatomic) Statement* statement;
+@property(strong,nonatomic) NSMutableArray* statement;
 
-
--(instancetype)initWithDictionary:(NSDictionary*)dict;
--(NSArray*)allCards;
+-(instancetype)initWithDictionary:(NSDictionary*) dict;
 
 @end
 
@@ -32,6 +30,6 @@
 @property(nonatomic,strong) NSString* desc;
 @property(nonatomic,strong) NSString* date;
 
--(id)initWithDict:(NSDictionary*)dict;
--(NSArray*)statementsForWeek:(NSArray*)context;
+-(id)init:(NSDictionary*) dict;
+
 @end

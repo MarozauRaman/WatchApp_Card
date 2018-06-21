@@ -10,30 +10,30 @@
 
 @implementation Card
 
--(instancetype)initWithDictionary:(NSDictionary*)dict {
+-(instancetype)initWithDictionary:(NSDictionary*) dict {
     self = [super init];
     if(self){
-        self.name = (NSString*)dict[@"name"];
+        self.name = (NSString*) dict[@"name"];
         self.imageName = dict[@"imageName"];
         self.amount = dict[@"amount"];
         self.number = dict[@"number"];
-        self.statement = dict[@"statement"];
+        self.statement=[[NSMutableArray alloc]init];
+        for(NSDictionary* source in dict[@"statement"]){
+            Statement* statement =[[Statement alloc]init:source];
+            [self.statement addObject:statement];
+        }
         self.term=dict[@"term"];
     }
     
     return self;
 }
 
--(NSArray*)allCards{
-    
-    NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-    return plist;
-}
 
 @end
 
 @implementation Statement
--(id)initWithDict:(NSDictionary *)dict{
+
+-(id)init:(NSDictionary*) dict{
     self=[super init];
     if(self){
         [self setAmount:dict[@"amount"]];
@@ -41,23 +41,6 @@
         [self setDesc:dict[@"desc"]];
     }
     return self;
-}
-
--(NSArray*)statementsForWeek:(id)context{
-    
-    NSMutableArray *arrayOfStatemnts=[[NSMutableArray alloc]init];
-    for (NSDictionary *statemen in context) {
-        Statement *statement = [[Statement alloc]initWithDict:statemen];
-        NSDateFormatter *dateFormat=[[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"dd.MM.yyyy"];
-        NSDate *datee = [dateFormat dateFromString:statement.date];
-        if([datee timeIntervalSinceNow] > -806400){
-            [arrayOfStatemnts addObject:statemen];
-        }
-        
-    }
-    
-    return arrayOfStatemnts;
 }
 
 @end

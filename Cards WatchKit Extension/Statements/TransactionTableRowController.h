@@ -10,8 +10,9 @@
 #import <WatchKit/WatchKit.h>
 
 @interface TransactionTableRowController : NSObject
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *money;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *text;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *date;
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* money;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* text;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* date;
 
 @end

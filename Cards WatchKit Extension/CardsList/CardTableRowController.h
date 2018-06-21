@@ -11,9 +11,8 @@
 
 @interface CardTableRowController : NSObject
 
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *number;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *image;
-
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labell;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* number;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage* image;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel* label;
 
 @end

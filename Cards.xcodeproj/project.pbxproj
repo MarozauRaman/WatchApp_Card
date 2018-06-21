@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
 		AD31F3BE20CE7CB1002EBE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3BC20CE7CB1002EBE4C /* Main.storyboard */; };
@@ -16,13 +15,12 @@
 		AD31F3C620CE7CB2002EBE4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3C520CE7CB2002EBE4C /* main.m */; };
 		AD31F3CA20CE7CB2002EBE4C /* Cards WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AD31F3C920CE7CB2002EBE4C /* Cards WatchKit App.app */; };
 		AD31F3D020CE7CB2002EBE4C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3CE20CE7CB2002EBE4C /* Interface.storyboard */; };
-		AD31F3D220CE7CB2002EBE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		AD31F3D920CE7CB2002EBE4C /* Cards WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AD31F3D820CE7CB2002EBE4C /* Cards WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		AD31F3DF20CE7CB2002EBE4C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3DE20CE7CB2002EBE4C /* InterfaceController.m */; };
+		AD31F3DF20CE7CB2002EBE4C /* CardListInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3DE20CE7CB2002EBE4C /* CardListInterfaceController.m */; };
 		AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3E120CE7CB2002EBE4C /* ExtensionDelegate.m */; };
 		AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3E320CE7CB3002EBE4C /* Assets.xcassets */; };
-		AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48920CE8CE6002EBE4C /* SecondScreenInterfaceController.m */; };
-		AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */; };
+		AD31F48A20CE8CE6002EBE4C /* CardDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48920CE8CE6002EBE4C /* CardDetailInterfaceController.m */; };
+		AD31F48D20CE8D39002EBE4C /* StatementsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48C20CE8D39002EBE4C /* StatementsInterfaceController.m */; };
 		AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */; };
 		AD3A88BB20DA485E005E4966 /* roboto in Resources */ = {isa = PBXBuildFile; fileRef = AD3A88BA20DA485E005E4966 /* roboto */; };
 		AD3A88BC20DA4863005E4966 /* roboto in Resources */ = {isa = PBXBuildFile; fileRef = AD3A88BA20DA485E005E4966 /* roboto */; };
@@ -52,6 +50,8 @@
 		AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C020CFC7460068C8F0 /* CardTableRowController.m */; };
 		AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */; };
 		AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */; };
+		ADAFC36420DB812000D734FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
+		ADAFC36620DB864200D734FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB9274620D7957E00CCFA6B /* Cards.plist */; };
 		ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274A20D7AC6D00CCFA6B /* Card.m */; };
 /* End PBXBuildFile section */
@@ -114,16 +114,16 @@
 		AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD31F3D320CE7CB2002EBE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD31F3D820CE7CB2002EBE4C /* Cards WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cards WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD31F3DD20CE7CB2002EBE4C /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		AD31F3DE20CE7CB2002EBE4C /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		AD31F3DD20CE7CB2002EBE4C /* CardListInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardListInterfaceController.h; sourceTree = "<group>"; };
+		AD31F3DE20CE7CB2002EBE4C /* CardListInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardListInterfaceController.m; sourceTree = "<group>"; };
 		AD31F3E020CE7CB2002EBE4C /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
 		AD31F3E120CE7CB2002EBE4C /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		AD31F3E320CE7CB3002EBE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD31F3E520CE7CB3002EBE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD31F48820CE8CE6002EBE4C /* SecondScreenInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondScreenInterfaceController.h; sourceTree = "<group>"; };
-		AD31F48920CE8CE6002EBE4C /* SecondScreenInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondScreenInterfaceController.m; sourceTree = "<group>"; };
-		AD31F48B20CE8D39002EBE4C /* ExtractionInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtractionInterfaceController.h; sourceTree = "<group>"; };
-		AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtractionInterfaceController.m; sourceTree = "<group>"; };
+		AD31F48820CE8CE6002EBE4C /* CardDetailInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardDetailInterfaceController.h; sourceTree = "<group>"; };
+		AD31F48920CE8CE6002EBE4C /* CardDetailInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardDetailInterfaceController.m; sourceTree = "<group>"; };
+		AD31F48B20CE8D39002EBE4C /* StatementsInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatementsInterfaceController.h; sourceTree = "<group>"; };
+		AD31F48C20CE8D39002EBE4C /* StatementsInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatementsInterfaceController.m; sourceTree = "<group>"; };
 		AD31F48E20CE8DA1002EBE4C /* AboutCardInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutCardInterfaceController.h; sourceTree = "<group>"; };
 		AD31F48F20CE8DA1002EBE4C /* AboutCardInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutCardInterfaceController.m; sourceTree = "<group>"; };
 		AD3A88BA20DA485E005E4966 /* roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = roboto; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 		AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionTableRowController.m; sourceTree = "<group>"; };
 		AD5904C520CFD8A60068C8F0 /* InfoTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoTableRowController.h; sourceTree = "<group>"; };
 		AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoTableRowController.m; sourceTree = "<group>"; };
+		ADAFC36820DB980D00D734FE /* Cards.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cards.plist; sourceTree = "<group>"; };
 		ADB9274620D7957E00CCFA6B /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cards.plist; path = ../../../Downloads/Cards.plist; sourceTree = "<group>"; };
 		ADB9274920D7AC6D00CCFA6B /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		ADB9274A20D7AC6D00CCFA6B /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 				AD3A88BA20DA485E005E4966 /* roboto */,
 				AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */,
 				AD31F3D320CE7CB2002EBE4C /* Info.plist */,
+				ADAFC36820DB980D00D734FE /* Cards.plist */,
 			);
 			path = "Cards WatchKit App";
 			sourceTree = "<group>";
@@ -273,8 +275,8 @@
 		AD3A88EA20DA67F6005E4966 /* CardsList */ = {
 			isa = PBXGroup;
 			children = (
-				AD31F3DD20CE7CB2002EBE4C /* InterfaceController.h */,
-				AD31F3DE20CE7CB2002EBE4C /* InterfaceController.m */,
+				AD31F3DD20CE7CB2002EBE4C /* CardListInterfaceController.h */,
+				AD31F3DE20CE7CB2002EBE4C /* CardListInterfaceController.m */,
 				AD5904BF20CFC7450068C8F0 /* CardTableRowController.h */,
 				AD5904C020CFC7460068C8F0 /* CardTableRowController.m */,
 			);
@@ -284,8 +286,8 @@
 		AD3A88EB20DA67F8005E4966 /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
-				AD31F48820CE8CE6002EBE4C /* SecondScreenInterfaceController.h */,
-				AD31F48920CE8CE6002EBE4C /* SecondScreenInterfaceController.m */,
+				AD31F48820CE8CE6002EBE4C /* CardDetailInterfaceController.h */,
+				AD31F48920CE8CE6002EBE4C /* CardDetailInterfaceController.m */,
 			);
 			path = CardDetail;
 			sourceTree = "<group>";
@@ -293,8 +295,8 @@
 		AD3A88EC20DA67FB005E4966 /* Statements */ = {
 			isa = PBXGroup;
 			children = (
-				AD31F48B20CE8D39002EBE4C /* ExtractionInterfaceController.h */,
-				AD31F48C20CE8D39002EBE4C /* ExtractionInterfaceController.m */,
+				AD31F48B20CE8D39002EBE4C /* StatementsInterfaceController.h */,
+				AD31F48C20CE8D39002EBE4C /* StatementsInterfaceController.m */,
 				AD5904C220CFD80D0068C8F0 /* TransactionTableRowController.h */,
 				AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */,
 			);
@@ -453,9 +455,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD31F3D220CE7CB2002EBE4C /* Assets.xcassets in Resources */,
 				AD3A88BB20DA485E005E4966 /* roboto in Resources */,
 				AD31F3D020CE7CB2002EBE4C /* Interface.storyboard in Resources */,
+				ADAFC36420DB812000D734FE /* Assets.xcassets in Resources */,
 				AD3A88C320DA49BA005E4966 /* Lato2OFL in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,10 +467,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */,
-				AD10C67620D24F7000A03647 /* Assets.xcassets in Resources */,
 				AD31F3E420CE7CB3002EBE4C /* Assets.xcassets in Resources */,
 				AD3A88E920DA4FD9005E4966 /* Lato2OFL in Resources */,
 				AD3A88E820DA4FD6005E4966 /* roboto in Resources */,
+				ADAFC36620DB864200D734FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,13 +491,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD31F48D20CE8D39002EBE4C /* ExtractionInterfaceController.m in Sources */,
+				AD31F48D20CE8D39002EBE4C /* StatementsInterfaceController.m in Sources */,
 				AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */,
 				AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */,
 				AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */,
-				AD31F48A20CE8CE6002EBE4C /* SecondScreenInterfaceController.m in Sources */,
+				AD31F48A20CE8CE6002EBE4C /* CardDetailInterfaceController.m in Sources */,
 				ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */,
-				AD31F3DF20CE7CB2002EBE4C /* InterfaceController.m in Sources */,
+				AD31F3DF20CE7CB2002EBE4C /* CardListInterfaceController.m in Sources */,
 				AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */,
 				AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */,
 			);

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>term</key>
+		<string>21.05.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>100</string>
+		<key>number</key>
+		<string>**** 1234</string>
+		<key>imageName</key>
+		<string>visa</string>
+		<key>name</key>
+		<string>Visa Classic</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>21.05.2018</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>123</string>
+		<key>number</key>
+		<string>**** 2345</string>
+		<key>imageName</key>
+		<string>mastercard</string>
+		<key>name</key>
+		<string>MasterCard</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>20.06.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>345</string>
+		<key>number</key>
+		<string>**** 3456</string>
+		<key>imageName</key>
+		<string>maestro</string>
+		<key>name</key>
+		<string>Maestro</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>22.06.2018</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>3453</string>
+		<key>number</key>
+		<string>**** 4567</string>
+		<key>imageName</key>
+		<string>belcart</string>
+		<key>name</key>
+		<string>Белкарт</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>21.05.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>34534</string>
+		<key>number</key>
+		<string>**** 1234</string>
+		<key>imageName</key>
+		<string>visa</string>
+		<key>name</key>
+		<string>Visa Classic</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>21.05.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>678</string>
+		<key>number</key>
+		<string>**** 2345</string>
+		<key>imageName</key>
+		<string>mastercard</string>
+		<key>name</key>
+		<string>MasterCard</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>21.05.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2018</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.06.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>123</string>
+		<key>number</key>
+		<string>**** 3456</string>
+		<key>imageName</key>
+		<string>maestro</string>
+		<key>name</key>
+		<string>Maestro</string>
+	</dict>
+	<dict>
+		<key>term</key>
+		<string>21.05.2019</string>
+		<key>statement</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>15.06.2017</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-36</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>14.06.2017</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+100</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>13.06.2017</string>
+				<key>desc</key>
+				<string>Оплата товаров и услуг</string>
+				<key>amount</key>
+				<string>-87</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>12.05.2018</string>
+				<key>desc</key>
+				<string>Зачисление средств</string>
+				<key>amount</key>
+				<string>+200</string>
+			</dict>
+		</array>
+		<key>amount</key>
+		<string>786</string>
+		<key>number</key>
+		<string>**** 4567</string>
+		<key>imageName</key>
+		<string>belcart</string>
+		<key>name</key>
+		<string>Белкарт</string>
+	</dict>
+</array>
+</plist>
