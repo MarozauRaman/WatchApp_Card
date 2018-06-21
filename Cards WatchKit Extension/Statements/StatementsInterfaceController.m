@@ -32,7 +32,7 @@
         [self.table setNumberOfRows:currentCard.statement.count withRowType:@"TransactionTableRowController"];
         for(int i=0;i<currentCard.statement.count;i++){
             TransactionTableRowController* row = [self.table rowControllerAtIndex:i];
-            Statement* statement = (Statement*) [currentCard.statement objectAtIndex:i];
+            Statement* statement = [currentCard.statement objectAtIndex:i];
             [row.text setText:statement.desc];
             [row.date setText:statement.date];
             [row.money setText:[statement.amount stringByAppendingString:@" BYN"]];
