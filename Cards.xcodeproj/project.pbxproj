@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3575C0A088DC3ACA899F63F6 /* libPods-Cards WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8073E2A5F0C969E909E2D189 /* libPods-Cards WatchKit Extension.a */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
 		AD31F3BE20CE7CB1002EBE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3BC20CE7CB1002EBE4C /* Main.storyboard */; };
@@ -25,10 +26,12 @@
 		AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C020CFC7460068C8F0 /* CardTableRowController.m */; };
 		AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */; };
 		AD5904C720CFD8A60068C8F0 /* InfoTableRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */; };
+		AD6EFA5920DCDBD10038B9E4 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6EFA5820DCDBD10038B9E4 /* libAFNetworking.a */; };
 		ADAFC36420DB812000D734FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		ADAFC36620DB864200D734FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31F3D120CE7CB2002EBE4C /* Assets.xcassets */; };
 		ADB9274720D7957E00CCFA6B /* Cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB9274620D7957E00CCFA6B /* Cards.plist */; };
 		ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9274A20D7AC6D00CCFA6B /* Card.m */; };
+		FE6E0CB8C687D26E55CD6AAE /* libPods-Cards.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF809964D23D67A33E4374B0 /* libPods-Cards.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		298E80D3D210ADB7B1FD073A /* Pods-Cards WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cards WatchKit Extension/Pods-Cards WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		8073E2A5F0C969E909E2D189 /* libPods-Cards WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cards WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31F3B320CE7CB1002EBE4C /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31F3B620CE7CB1002EBE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,16 +112,32 @@
 		AD5904C320CFD80D0068C8F0 /* TransactionTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionTableRowController.m; sourceTree = "<group>"; };
 		AD5904C520CFD8A60068C8F0 /* InfoTableRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoTableRowController.h; sourceTree = "<group>"; };
 		AD5904C620CFD8A60068C8F0 /* InfoTableRowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoTableRowController.m; sourceTree = "<group>"; };
+		AD6EFA5620DCDAC40038B9E4 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6EFA5820DCDBD10038B9E4 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6EFA5A20DCDBD10038B9E4 /* libAFNetworking.root-NSURLSession-Security-Serialization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libAFNetworking.root-NSURLSession-Security-Serialization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB9274620D7957E00CCFA6B /* Cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cards.plist; path = ../../../Downloads/Cards.plist; sourceTree = "<group>"; };
 		ADB9274920D7AC6D00CCFA6B /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		ADB9274A20D7AC6D00CCFA6B /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		B452434E3179717E23720E7E /* Pods-Cards WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cards WatchKit Extension/Pods-Cards WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		CB0A5BD8106BF3F081540074 /* Pods-Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cards/Pods-Cards.debug.xcconfig"; sourceTree = "<group>"; };
+		FB23DB91628D999C93D1FFE2 /* Pods-Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cards/Pods-Cards.release.xcconfig"; sourceTree = "<group>"; };
+		FF809964D23D67A33E4374B0 /* libPods-Cards.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cards.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		038AE7C8E255254B0A48D778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD31F3B020CE7CB1002EBE4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6EFA5920DCDBD10038B9E4 /* libAFNetworking.a in Frameworks */,
+				FE6E0CB8C687D26E55CD6AAE /* libPods-Cards.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +145,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3575C0A088DC3ACA899F63F6 /* libPods-Cards WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A07829EB9D1B98409DA15A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD6EFA5820DCDBD10038B9E4 /* libAFNetworking.a */,
+				AD6EFA5A20DCDBD10038B9E4 /* libAFNetworking.root-NSURLSession-Security-Serialization.a */,
+				AD6EFA5620DCDAC40038B9E4 /* libAFNetworking.a */,
+				FF809964D23D67A33E4374B0 /* libPods-Cards.a */,
+				8073E2A5F0C969E909E2D189 /* libPods-Cards WatchKit Extension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81FFA7419D4E02A4F263CCA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A5BD8106BF3F081540074 /* Pods-Cards.debug.xcconfig */,
+				FB23DB91628D999C93D1FFE2 /* Pods-Cards.release.xcconfig */,
+				298E80D3D210ADB7B1FD073A /* Pods-Cards WatchKit Extension.debug.xcconfig */,
+				B452434E3179717E23720E7E /* Pods-Cards WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD31F3AA20CE7CB1002EBE4C = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +182,8 @@
 				AD31F3CD20CE7CB2002EBE4C /* Cards WatchKit App */,
 				AD31F3DC20CE7CB2002EBE4C /* Cards WatchKit Extension */,
 				AD31F3B420CE7CB1002EBE4C /* Products */,
+				81FFA7419D4E02A4F263CCA6 /* Pods */,
+				00A07829EB9D1B98409DA15A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,10 +298,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD31F3F020CE7CB3002EBE4C /* Build configuration list for PBXNativeTarget "Cards" */;
 			buildPhases = (
+				BB0EAD5844BB2A6BE709FB2B /* [CP] Check Pods Manifest.lock */,
 				AD31F3AF20CE7CB1002EBE4C /* Sources */,
 				AD31F3B020CE7CB1002EBE4C /* Frameworks */,
 				AD31F3B120CE7CB1002EBE4C /* Resources */,
 				AD31F3EF20CE7CB3002EBE4C /* Embed Watch Content */,
+				36D55912A1F97DF3089C4C84 /* [CP] Embed Pods Frameworks */,
+				974E1FB5BDC9424079AC87EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +322,7 @@
 			buildPhases = (
 				AD31F3C720CE7CB2002EBE4C /* Resources */,
 				AD31F3EB20CE7CB3002EBE4C /* Embed App Extensions */,
+				038AE7C8E255254B0A48D778 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD31F3E820CE7CB3002EBE4C /* Build configuration list for PBXNativeTarget "Cards WatchKit Extension" */;
 			buildPhases = (
+				1BD93943238303640715D6D9 /* [CP] Check Pods Manifest.lock */,
 				AD31F3D420CE7CB2002EBE4C /* Sources */,
 				AD31F3D520CE7CB2002EBE4C /* Frameworks */,
 				AD31F3D620CE7CB2002EBE4C /* Resources */,
+				906C87B1668ECC216B365158 /* [CP] Embed Pods Frameworks */,
+				A3990C729DD31714CF6C5132 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -371,6 +425,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BD93943238303640715D6D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cards WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36D55912A1F97DF3089C4C84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cards/Pods-Cards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906C87B1668ECC216B365158 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cards WatchKit Extension/Pods-Cards WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		974E1FB5BDC9424079AC87EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cards/Pods-Cards-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3990C729DD31714CF6C5132 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cards WatchKit Extension/Pods-Cards WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0EAD5844BB2A6BE709FB2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD31F3AF20CE7CB1002EBE4C /* Sources */ = {
@@ -556,6 +709,7 @@
 		};
 		AD31F3E920CE7CB3002EBE4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 298E80D3D210ADB7B1FD073A /* Pods-Cards WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +730,7 @@
 		};
 		AD31F3EA20CE7CB3002EBE4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B452434E3179717E23720E7E /* Pods-Cards WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -630,6 +785,7 @@
 		};
 		AD31F3F120CE7CB3002EBE4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0A5BD8106BF3F081540074 /* Pods-Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -649,6 +805,7 @@
 		};
 		AD31F3F220CE7CB3002EBE4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB23DB91628D999C93D1FFE2 /* Pods-Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

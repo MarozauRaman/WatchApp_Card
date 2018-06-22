@@ -9,7 +9,10 @@
 #import "CardListInterfaceController.h"
 #import "CardTableRowController.h"
 #import "Card.h"
+#import <AFNetworking.h>
+#import <AFURLRequestSerialization.h>
 
+static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/weather_sample/";
 
 @interface CardListInterfaceController ()
 
@@ -37,7 +40,7 @@
         [dateFormat setDateFormat:@"dd.MM.yyyy"];
         NSDate *date = [dateFormat dateFromString:card.term];
         if([date timeIntervalSinceNow] < 0){
-            [row.label setTextColor:[UIColor colorWithRed:1.00 green:0.25 blue:0.21 alpha:1.0]];
+            
         }
         
         
@@ -50,14 +53,30 @@
 }
 
 -(NSMutableArray*)cards {
-    if (!_cards) {
-        _cards =[[NSMutableArray alloc]init];
-        NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-        for (NSDictionary* dict in plist) {
-            Card* card = [[Card alloc] initWithDictionary:dict];
-            [_cards addObject:card];
-        }
+   if (!_cards) {
+#pragma mark - request
+
+        NSURL* url = [NSURL URLWithString:@"http://httpbin.org/json"];
+        AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
+        [manager GET:[url absoluteString]
+          parameters:nil
+            progress:nil
+             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                 NSLog(@"%@", responseObject);
+             }
+             failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
+                 NSLog(@"Error: %@", [failure localizedDescription]);
+             }];
+
+#pragma mark - from plist
+//        _cards =[[NSMutableArray alloc]init];
+//        NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
+//        for (NSDictionary* dict in plist) {
+//            Card* card = [[Card alloc] initWithDictionary:dict];
+//            [_cards addObject:card];
+//        }
     }
+    
     return _cards;
 }
 

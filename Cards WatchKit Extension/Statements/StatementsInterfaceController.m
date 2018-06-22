@@ -11,6 +11,7 @@
 #import "Card.h"
 
 
+
 @interface StatementsInterfaceController ()
 
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel* forWeekLabel;
@@ -47,10 +48,10 @@
     }else{
         [_forWeekLabel setHidden:true];
         [_noDataLabel setText:@"Не было операций за прошлую неделю"];
+        
     }
+
 }
-
-
 
 
 
