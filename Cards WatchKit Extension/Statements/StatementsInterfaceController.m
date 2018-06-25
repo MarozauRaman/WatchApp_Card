@@ -36,9 +36,9 @@
             Statement* statement = [currentCard.statement objectAtIndex:i];
             [row.text setText:statement.desc];
             [row.date setText:statement.date];
-            [row.money setText:[statement.amount stringByAppendingString:@" BYN"]];
+            [row.money setText:[statement.sign stringByAppendingString:[statement.amount stringByAppendingString:@" BYN"]]];
             
-            if([statement.amount doubleValue] < 0){
+            if([statement.sign isEqualToString:@"-"]){
                 [row.money setTextColor:[UIColor colorWithRed:0.96 green:0.74 blue:0.42 alpha:1.0]];
             } else {
                 [row.money setTextColor:[UIColor colorWithRed:0.55 green:0.81 blue:0.39 alpha:1.0]];

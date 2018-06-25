@@ -29,7 +29,7 @@
     self.currentCard =(Card*) context;
     
     [self.number setText:self.currentCard.number];
-    [self.balance setText:[self.currentCard.amount stringByAppendingString:@" BYN"]];
+    [self.balance setText:[self.currentCard.amount stringByAppendingString:[@" " stringByAppendingString: self.currentCard.currency]]];
     [self.image setImageNamed:self.currentCard.imageName];
     [self.titleOfCard setText:self.currentCard.name];
     

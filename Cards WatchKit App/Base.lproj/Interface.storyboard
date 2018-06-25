@@ -56,9 +56,11 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <imageView alignment="center" verticalAlignment="center" id="Chp-YU-Fgg"/>
                     </items>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
+                        <outlet property="activityImage" destination="Chp-YU-Fgg" id="oSU-yn-8Bv"/>
                         <outlet property="table" destination="W3c-Je-kNV" id="0k9-jQ-aXC"/>
                     </connections>
                 </controller>

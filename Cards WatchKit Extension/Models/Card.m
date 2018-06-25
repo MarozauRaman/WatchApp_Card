@@ -15,32 +15,31 @@
 -(instancetype)initWithDictionary:(NSDictionary*) dict {
     self = [super init];
     if(self){
-        self.name = dict[@"name"];
-        self.imageName = dict[@"imageName"];
-        self.amount = dict[@"amount"];
-        self.number = dict[@"number"];
+        self.name = dict[@"cardName"];
+        self.imageName = dict[@"type"];
+        self.amount = dict[@"balance"];
+        self.number = dict[@"num"];
         self.statement=[[NSMutableArray alloc]init];
-        for(NSDictionary* source in dict[@"statement"]){
-            Statement* statement =[[Statement alloc]init:source];
-            [self.statement addObject:statement];
-        }
         self.term=dict[@"term"];
+        self.currency = dict[@"currency"];
     }
     
     return self;
 }
 
 
+
 @end
 
 @implementation Statement
 
--(id)init:(NSDictionary*) dict{
+-(id)initWithDictionary:(NSDictionary*) dict{
     self=[super init];
     if(self){
-        [self setAmount:dict[@"amount"]];
-        [self setDate:dict[@"date"]];
-        [self setDesc:dict[@"desc"]];
+        self.amount = dict[@"transactionAmt"];
+        self.date = dict[@"date"];
+        self.desc = dict[@"type"];
+        self.sign = dict[@"sign"];
     }
     return self;
 }

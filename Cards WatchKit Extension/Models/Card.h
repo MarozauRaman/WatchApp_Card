@@ -18,6 +18,8 @@
 @property(nonatomic,strong) NSString* amount;
 @property(nonatomic,strong) NSString* imageName;
 @property(nonatomic,strong) NSString* term;
+@property(strong,nonatomic) NSString* currency;
+
 @property(strong,nonatomic) NSMutableArray* statement;
 
 -(instancetype)initWithDictionary:(NSDictionary*) dict;
@@ -29,7 +31,8 @@
 @property(nonatomic,strong) NSString* amount;
 @property(nonatomic,strong) NSString* desc;
 @property(nonatomic,strong) NSString* date;
+@property(strong,nonatomic) NSString* sign;
 
--(id)init:(NSDictionary*) dict;
+-(id)initWithDictionary:(NSDictionary*) dict;
 
 @end
