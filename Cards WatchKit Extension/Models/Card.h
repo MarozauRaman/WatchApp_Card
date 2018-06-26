@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class Card;
-@class Statement;
-
 @interface Card : NSObject
 
 @property(nonatomic,assign) NSString* idCard;
