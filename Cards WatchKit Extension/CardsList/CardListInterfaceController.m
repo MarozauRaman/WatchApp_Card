@@ -29,13 +29,25 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     
-    //Animation
-    
+    [self tableWithCards];
+   
+}
+
+
+-(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{
+   [self pushControllerWithName:@"CardDetailInterfaceController" context:[self.cards objectAtIndex:rowIndex]];
+}
+
+-(void)willActivate{
+    [self tableWithCards];
+}
+
+-(void)tableWithCards{
     [self.activityImage setImageNamed:@"Activity"];
     [self.activityImage startAnimatingWithImagesInRange:NSMakeRange(0, 15) duration:1.0 repeatCount:0];
     [self.activityImage setHidden:NO];
     [self.table setHidden:YES];
-
+    
     
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
     [manager POST:@"https://msgr.lwo.by:8443/cards_response"
@@ -74,39 +86,7 @@
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
               NSLog(@"Error: %@", [failure localizedDescription]);
           }];
-    
-    
-
-   
-    
-    
-    
-    
-    
-   
-
-    
 }
-
-
--(void)table:(WKInterfaceTable *)_card didSelectRowAtIndex:(NSInteger)rowIndex{
-   [self pushControllerWithName:@"CardDetailInterfaceController" context:[self.cards objectAtIndex:rowIndex]];
-}
-
-//-(NSMutableArray*)cards {
-//   if (!_cards) {
-//#pragma mark - from plist
-//        _cards =[[NSMutableArray alloc]init];
-//        NSArray* plist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cards" ofType:@"plist"]];
-//        for (NSDictionary* dict in plist) {
-//            Card* card = [[Card alloc] initWithDictionary:dict];
-//            [_cards addObject:card];
-//        }
-//    }
-//
-//    return _cards;
-//}
-
 
 @end
 
