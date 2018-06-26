@@ -15,13 +15,33 @@
 -(instancetype)initWithDictionary:(NSDictionary*) dict {
     self = [super init];
     if(self){
-        self.name = dict[@"cardName"];
-        self.imageName = dict[@"type"];
-        self.amount = dict[@"balance"];
-        self.number = dict[@"num"];
-        self.statement=[[NSMutableArray alloc]init];
-        self.term=dict[@"term"];
+        self.idCard = dict[@"idCard"];
+        self.isCurrent = dict[@"isCurrent"];
+        self.type = dict[@"type"];
+        self.expdate = dict[@"expdate"];
+        self.cardClass = dict[@"cardClass"];
+        self.corporative = dict[@"corporative"];
+        self.num = dict[@"num"];
+        self.cardHolder = dict[@"cardHolder"];
+        self.cardName = dict[@"cardName"];
+        self.fixedBalance = dict[@"fixedBalance"];
         self.currency = dict[@"currency"];
+        self.blocking = dict[@"blocking"];
+        self.balance = dict[@"balance"];
+        self.international = dict[@"international"];
+        self.internet = dict[@"internet"];
+        self.status3D = dict[@"status3D"];
+        self.statusPimp = dict[@"statusPimp"];
+        self.statusLimits = dict[@"statusLimits"];
+        self.isProlongable = dict[@"isProlongable"];
+        self.isReplaceable = dict[@"isReplaceable"];
+        self.isCredit = dict[@"isCredit"];
+        self.isBelcard = dict[@"isBelcard"];
+        self.isSendPinAllowed = dict[@"isSendPinAllowed"];
+        self.isDBO = dict[@"isDBO"];
+        self.cardClassColor = dict[@"cardClassColor"];
+        self.isVirtual=dict[@"isVirtual"];
+        self.cardsKey = dict[@"cardsKey"];
     }
     
     return self;
@@ -31,17 +51,3 @@
 
 @end
 
-@implementation Statement
-
--(id)initWithDictionary:(NSDictionary*) dict{
-    self=[super init];
-    if(self){
-        self.amount = dict[@"transactionAmt"];
-        self.date = dict[@"date"];
-        self.desc = dict[@"type"];
-        self.sign = dict[@"sign"];
-    }
-    return self;
-}
-
-@end

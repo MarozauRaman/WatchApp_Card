@@ -173,9 +173,11 @@
                         <label width="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="0" id="Svn-k7-NtD">
                             <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                         </label>
+                        <imageView alignment="center" verticalAlignment="center" id="uNB-d6-6cI"/>
                     </items>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
+                        <outlet property="activityImage" destination="uNB-d6-6cI" id="XYo-26-wcJ"/>
                         <outlet property="forWeekLabel" destination="nrK-j6-coe" id="ofB-d5-5t1"/>
                         <outlet property="noDataLabel" destination="Svn-k7-NtD" id="MXu-6l-Xrn"/>
                         <outlet property="table" destination="3iL-BU-H8N" id="gf2-lw-bjr"/>
@@ -212,9 +214,11 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <imageView alignment="center" verticalAlignment="center" id="n5X-Ed-HYe"/>
                     </items>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
+                        <outlet property="activityImage" destination="n5X-Ed-HYe" id="fsF-gV-kQz"/>
                         <outlet property="table" destination="kHv-Nk-UiF" id="Qkk-MM-kXf"/>
                     </connections>
                 </controller>

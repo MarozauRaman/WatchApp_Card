@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3575C0A088DC3ACA899F63F6 /* libPods-Cards WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8073E2A5F0C969E909E2D189 /* libPods-Cards WatchKit Extension.a */; };
+		84ABAE3220E23A1F0025847A /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABAE3120E23A1F0025847A /* History.m */; };
+		84ABAE3520E23A400025847A /* Requisites.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ABAE3420E23A400025847A /* Requisites.m */; };
 		92646E3819BEA026B72648F8 /* libPods-Cards.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF809964D23D67A33E4374B0 /* libPods-Cards.a */; };
 		AD31F3B820CE7CB1002EBE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3B720CE7CB1002EBE4C /* AppDelegate.m */; };
 		AD31F3BB20CE7CB1002EBE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD31F3BA20CE7CB1002EBE4C /* ViewController.m */; };
@@ -80,6 +82,10 @@
 		298E80D3D210ADB7B1FD073A /* Pods-Cards WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cards WatchKit Extension/Pods-Cards WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		54F707FFB505F83A8090DD8E /* Pods-Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cards/Pods-Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		8073E2A5F0C969E909E2D189 /* libPods-Cards WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cards WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84ABAE3020E23A1F0025847A /* History.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		84ABAE3120E23A1F0025847A /* History.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		84ABAE3320E23A400025847A /* Requisites.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Requisites.h; sourceTree = "<group>"; };
+		84ABAE3420E23A400025847A /* Requisites.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Requisites.m; sourceTree = "<group>"; };
 		84B1A93D20E16D82006AEE9C /* libNKWatchActivityIndicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNKWatchActivityIndicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B1A93F20E17412006AEE9C /* libEMTLoadingIndicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEMTLoadingIndicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31F3B320CE7CB1002EBE4C /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +297,10 @@
 			children = (
 				ADB9274920D7AC6D00CCFA6B /* Card.h */,
 				ADB9274A20D7AC6D00CCFA6B /* Card.m */,
+				84ABAE3020E23A1F0025847A /* History.h */,
+				84ABAE3120E23A1F0025847A /* History.m */,
+				84ABAE3320E23A400025847A /* Requisites.h */,
+				84ABAE3420E23A400025847A /* Requisites.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ABAE3520E23A400025847A /* Requisites.m in Sources */,
 				AD31F48D20CE8D39002EBE4C /* StatementsInterfaceController.m in Sources */,
 				AD31F3E220CE7CB2002EBE4C /* ExtensionDelegate.m in Sources */,
 				AD31F49020CE8DA1002EBE4C /* AboutCardInterfaceController.m in Sources */,
@@ -488,6 +499,7 @@
 				ADB9274B20D7AC6D00CCFA6B /* Card.m in Sources */,
 				AD31F3DF20CE7CB2002EBE4C /* CardListInterfaceController.m in Sources */,
 				AD5904C420CFD80D0068C8F0 /* TransactionTableRowController.m in Sources */,
+				84ABAE3220E23A1F0025847A /* History.m in Sources */,
 				AD5904C120CFC7460068C8F0 /* CardTableRowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

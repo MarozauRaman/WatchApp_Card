@@ -13,6 +13,7 @@
 #import <AFURLRequestSerialization.h>
 #import <AFHTTPSessionManager.h>
 
+
 @interface CardListInterfaceController ()
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable* table;
@@ -28,59 +29,62 @@
     [super awakeWithContext:context];
     // Configure interface objects here.
     
+    //Animation
+    
     [self.activityImage setImageNamed:@"Activity"];
     [self.activityImage startAnimatingWithImagesInRange:NSMakeRange(0, 15) duration:1.0 repeatCount:0];
-    NSURL* url = [NSURL URLWithString:@"https://msgr.lwo.by:8443/cards_response"];
-    NSURL* urlStatement = [NSURL URLWithString:@"https://msgr.lwo.by:8443/history"];
+    [self.activityImage setHidden:NO];
+    [self.table setHidden:YES];
+
     
     AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-    [manager GET:[url absoluteString]
-      parameters:nil
-         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             NSArray* array = [[responseObject objectForKey:@"values"] objectForKey:@"cards"];
-             
-             [manager GET:[urlStatement absoluteString]
-               parameters:nil
-                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObjectStatement) {
-                 NSMutableArray* arrayofStatements = [[responseObjectStatement objectForKey:@"values"] objectForKey:@"history"];
-                 [self.table setNumberOfRows:[array count] withRowType:@"CardTableRowController"];
-                 self.cards = [NSMutableArray array];
-                      
-                //creating array of cards
-                 for(NSMutableDictionary* dict in array){
-                     //creating card
-                     Card* card = [[Card alloc] initWithDictionary:dict];
-                     //creating array of statements for card
-                     for(NSDictionary* dict in arrayofStatements){
-                         Statement* statement = [[Statement alloc] initWithDictionary:dict];
-                         [card.statement addObject:statement];
-                     }
-                     [self.cards addObject:card];
-                 }
-                      [self.activityImage stopAnimating];
-                //into rows in table
-                 for(int i =0;i<[self.cards count];i++){
-                     Card* card=self.cards[i];
-                     CardTableRowController* row = [self.table rowControllerAtIndex:i];
-                     [row.label setText:card.name];
-                     [row.image setImageNamed:card.imageName];
-                     [row.number setText:card.number];
-                     
-                 }
-             
-             }
-                  failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
-                      NSLog(@"Error: %@", [failure localizedDescription]);
-                  }];
-           
-         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
-             NSLog(@"Error: %@", [failure localizedDescription]);
-         }];
+    [manager POST:@"https://msgr.lwo.by:8443/cards_response"
+       parameters:nil
+         progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              
+              NSArray* array = [[responseObject objectForKey:@"values"] objectForKey:@"cards"];
+              [self.table setNumberOfRows:[array count] withRowType:@"CardTableRowController"];
+              self.cards = [NSMutableArray array];
+              
+              //creating array of cards
+              for(NSMutableDictionary* dict in array){
+                  //creating card
+                  Card* card = [[Card alloc] initWithDictionary:dict];
+                  
+                  
+                  [self.cards addObject:card];
+              }
+              
+              //Stop animation
+              [self.activityImage stopAnimating];
+              [self.activityImage setHidden:YES];
+              [self.table setHidden:NO];
+              
+              //into rows in table
+              for(int i =0;i<[self.cards count];i++){
+                  Card* card=self.cards[i];
+                  CardTableRowController* row = [self.table rowControllerAtIndex:i];
+                  [row.label setText:card.cardName];
+                  [row.image setImageNamed:card.type];
+                  [row.number setText:card.num];
+                  
+              }
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull failure) {
+              NSLog(@"Error: %@", [failure localizedDescription]);
+          }];
+    
+    
+
+   
+    
+    
     
     
     
    
-        
+
     
 }
 

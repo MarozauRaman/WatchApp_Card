@@ -28,19 +28,19 @@
     
     self.currentCard =(Card*) context;
     
-    [self.number setText:self.currentCard.number];
-    [self.balance setText:[self.currentCard.amount stringByAppendingString:[@" " stringByAppendingString: self.currentCard.currency]]];
-    [self.image setImageNamed:self.currentCard.imageName];
-    [self.titleOfCard setText:self.currentCard.name];
+    [self.number setText:self.currentCard.num];
+    [self.balance setText:[self.currentCard.balance stringByAppendingString:[@" " stringByAppendingString: self.currentCard.currency]]];
+    [self.image setImageNamed:self.currentCard.type];
+    [self.titleOfCard setText:self.currentCard.cardName];
     
 }
 
 
 - (IBAction)ExtractionButton {
-    [self pushControllerWithName:@"StatementsInterfaceController" context:self.currentCard];
+    [self pushControllerWithName:@"StatementsInterfaceController" context:nil];
 }
 - (IBAction)AboutCardButton {
-    [self pushControllerWithName:@"AboutCardInterfaceController" context:self.currentCard];
+    [self pushControllerWithName:@"AboutCardInterfaceController" context:nil];
 }
 
 

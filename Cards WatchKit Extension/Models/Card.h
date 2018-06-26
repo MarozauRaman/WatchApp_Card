@@ -13,26 +13,37 @@
 
 @interface Card : NSObject
 
-@property(nonatomic,strong) NSString* name;
-@property(nonatomic,strong) NSString* number;
-@property(nonatomic,strong) NSString* amount;
-@property(nonatomic,strong) NSString* imageName;
-@property(nonatomic,strong) NSString* term;
-@property(strong,nonatomic) NSString* currency;
+@property(nonatomic,assign) NSString* idCard;
+@property(nonatomic,assign) BOOL isCurrent;
+@property(nonatomic,strong) NSString* type;
+@property(nonatomic,strong) NSString* expdate;
+@property(nonatomic,strong) NSString* cardClass;
+@property(nonatomic,strong) NSString* corporative;
+@property(nonatomic,strong) NSString* num;
+@property(nonatomic,strong) NSString* cardHolder;
+@property(nonatomic,strong) NSString* cardName;
+@property(nonatomic,strong) NSString* fixedBalance;
+@property(nonatomic,strong) NSString* currency;
+@property(nonatomic,strong) NSString* blocking;
+@property(nonatomic,strong) NSString* balance;
+@property(nonatomic,strong) NSString* international;
+@property(strong,nonatomic) NSString* internet;
+@property(strong,nonatomic) NSString* status3D;
+@property(strong,nonatomic) NSString* statusPimp;
+@property(strong,nonatomic) NSString* statusLimits;
+@property(strong,nonatomic) NSString* isProlongable;
+@property(strong,nonatomic) NSString* isReplaceable;
+@property(strong,nonatomic) NSString* isCredit;
+@property(strong,nonatomic) NSString* isBelcard;
+@property(strong,nonatomic) NSString* isSendPinAllowed;
+@property(strong,nonatomic) NSString* isDBO;
+@property(strong,nonatomic) NSString* cardClassColor;
+@property(strong,nonatomic) NSString* isVirtual;
+@property(strong,nonatomic) NSString* cardsKey;
 
-@property(strong,nonatomic) NSMutableArray* statement;
+
 
 -(instancetype)initWithDictionary:(NSDictionary*) dict;
 
 @end
 
-@interface Statement : NSObject
-
-@property(nonatomic,strong) NSString* amount;
-@property(nonatomic,strong) NSString* desc;
-@property(nonatomic,strong) NSString* date;
-@property(strong,nonatomic) NSString* sign;
-
--(id)initWithDictionary:(NSDictionary*) dict;
-
-@end
